@@ -1,0 +1,34 @@
+/* green #9FD7C4 */
+/*font-family: 'Lato', sans-serif;*/
+/*font-family: 'Roboto Condensed', sans-serif;*/
+
+body {
+	background-color: #DDE4C5;
+	margin: 0px;
+}
+
+#mainContainer {
+	outline: 0px;
+}
+
+#header {
+	height: 200px;
+	background-color: #647590;
+}
+
+#navBar {
+	background-color: #252525;
+	width: 100%;
+	height: 3em;	
+
+	/* font stuff */
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #E2E1DF;
+	line-height: 3em;
+	font-size: large;
+}
+
+.navItem {
+	float: left;
+	margin-left: 1.5em;
+}

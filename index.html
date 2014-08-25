@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/indexCtrl.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato|Roboto+Condensed' rel='stylesheet' type='text/css'>
+	<title>Fool Hearts</title>
+</head>
+<body>
+
+	<div ng-app="FoolHearts" ng-controller="IndexCtrl" id="mainContainer">
+
+		<!-- HEADER -->
+		<div id="header"></div>
+
+		<!-- NAVIGATION BAR -->
+		<div id="navBar">
+			<div style="display:table;margin: 0 auto;"> <!-- div to align navItems horizontally -->	
+				<div class="navItem" ng-bind="'Home'"></div>
+				<div class="navItem" ng-bind="'Media'"></div>
+				<div class="navItem" ng-bind="'Repertoire'"></div>
+				<div class="navItem" ng-bind="'Members'"></div>
+				<div class="navItem" ng-bind="'Your Day'"></div>
+				<div class="navItem" ng-bind="'Contact / Quote'"></div>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>
