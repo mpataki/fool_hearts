@@ -1,0 +1,15 @@
+{
+  "name": "Fool Hearts Website",
+  "version": "1.0",
+  "authors": [
+    "mpataki <matpataki@gmail.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "www.foolhearts.com",
+  "private": true,
+  "dependencies": {
+  	"angular": "1.2.x",
+  	"angular-route": "~1.2.x"
+  }
+}

@@ -1,3 +1,5 @@
-angular.module('FoolHearts', []).controller("IndexCtrl", function($scope) {
+var indexCtrl = angular.module('indexCtrl', []);
 
+indexCtrl.controller('indexCtrl', function($scope) {
+	console.log("indexCtrl loaded");
 });

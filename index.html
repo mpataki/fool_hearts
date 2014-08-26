@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+
+	<!-- CONTROLLERS -->
+	<script type="text/javascript" src="js/app.js"></script>
 	<script type="text/javascript" src="js/indexCtrl.js"></script>
+	<script type="text/javascript" src="js/homeCtrl.js"></script>
+	<script type="text/javascript" src="js/mediaCtrl.js"></script>
+	<script type="text/javascript" src="js/repertoireCtrl.js"></script>
+	<script type="text/javascript" src="js/membersCtrl.js"></script>
+	<script type="text/javascript" src="js/yourDayCtrl.js"></script>
+	<script type="text/javascript" src="js/contactQuoteCtrl.js"></script>
+
+	<!-- STYLE -->
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 	<link href='http://fonts.googleapis.com/css?family=Lato|Roboto+Condensed' rel='stylesheet' type='text/css'>
 	<title>Fool Hearts</title>
 </head>
 <body>
 
-	<div ng-app="FoolHearts" ng-controller="IndexCtrl" id="mainContainer">
+	<div ng-app="FoolHeartsApp" ng-controller="indexCtrl" id="mainContainer">
 
 		<!-- HEADER -->
 		<div id="header"></div>
@@ -17,14 +29,17 @@
 		<!-- NAVIGATION BAR -->
 		<div id="navBar">
 			<div style="display:table;margin: 0 auto;"> <!-- div to align navItems horizontally -->	
-				<div class="navItem" ng-bind="'Home'"></div>
-				<div class="navItem" ng-bind="'Media'"></div>
-				<div class="navItem" ng-bind="'Repertoire'"></div>
-				<div class="navItem" ng-bind="'Members'"></div>
-				<div class="navItem" ng-bind="'Your Day'"></div>
-				<div class="navItem" ng-bind="'Contact / Quote'"></div>
+				<a href="#/home" 					class="navItem" 	ng-bind="'Home'"></a>
+				<a href="#/media" 				class="navItem" 	ng-bind="'Media'"></a>
+				<a href="#/repertoire" 		class="navItem" 	ng-bind="'Repertoire'"></a>
+				<a href="#/members" 			class="navItem" 	ng-bind="'Members'"></a>
+				<a href="#/your_day" 			class="navItem" 	ng-bind="'Your Day'"></a>
+				<a href="#/contact_quote" class="navItem" 	ng-bind="'Contact / Quote'"></a>
 			</div>
 		</div>
+		
+		<!-- CONTENT -->
+		<div ng-view></div>
 
 	</div>
 
