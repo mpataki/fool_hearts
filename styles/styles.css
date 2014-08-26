@@ -112,8 +112,7 @@ a {
 	float: left;
 
 	display:table; 
-	top: 50%;
-  transform: translateY(30%);
+  transform: translateY(20%);
 }
 
 #carousel {
@@ -121,4 +120,9 @@ a {
 	height: 100%;
 	background-color: white;
 	float: right;
+}
+
+#homeRow2 {
+	padding-top: 2em;
+	padding-bottom: 1em;
 }
