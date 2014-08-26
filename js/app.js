@@ -38,7 +38,7 @@ FoolHeartsApp.config(['$routeProvider',
         controller: 'contactQuoteCtrl'
       }).
       otherwise({
-        redirectTo: 'partials/home.html',
+        templateUrl: 'partials/home.html',
         controller: 'homeCtrl'
       });
   }

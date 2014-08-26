@@ -17,10 +17,6 @@ a {
 }
 
 #header {
-	/*background-color: #647590;*/
-	/*background-image: url('../images/brush-strokes.gif');
-	background-repeat: no-repeat;
-	background-size: 100%;*/
 	text-align: center;
 	font-family: 'Roboto Condensed', sans-serif;
 	color: #E2E1DF;
@@ -48,6 +44,11 @@ a {
 .hline { 
 	height: 1px; 
 	background: #fff;
+}
+
+.hline2 { 
+	height: 1px; 
+	background-color: #252525;
 }
 
 #socialLinks {
@@ -85,7 +86,6 @@ a {
 }
 
 #content {
-	height: 100em;
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
@@ -93,15 +93,25 @@ a {
 	font-family: 'Lato', sans-serif;
 }
 
-/* HOME */
+#footer {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #DDE4C5;
+	font-family: 'Lato', sans-serif;
+	font-size: small;
+	text-align: center;
+	padding: 1em;
+}
 
-#home {
+.basicContent {
 	margin-left: auto;
 	margin-right: auto;
 	width: 80vw;
 	padding: 1em;
-	/*background-color: white;*/
 }
+
+/**************** HOME ****************/
 
 #homeRow1 {
 	height: 18em;
@@ -125,4 +135,28 @@ a {
 #homeRow2 {
 	padding-top: 2em;
 	padding-bottom: 1em;
+}
+
+/**************** REPERTOIRE ****************/
+
+#repBlurb {
+	padding: 1em;
+}
+
+#repTable {
+	margin-left: auto;
+	margin-right: auto;
+	border-spacing: 0px 0px;
+}
+
+#tableHeader {
+	font-size: large;
+	font-weight: bold;
+	text-align: center;
+	background-color: #646464;
+}
+
+.repTableEntry {
+	padding-left: 1em;
+	padding-right: 1em;
 }
