@@ -149,11 +149,20 @@ a {
 	border-spacing: 0px 0px;
 }
 
-#tableHeader {
+.tableHeader {
 	font-size: large;
 	font-weight: bold;
 	text-align: center;
-	background-color: #646464;
+	padding-left: 1em;
+	padding-right: 1em;
+	cursor: pointer;
+	transition: background-color 0.4s ease;
+	background-color: #B7C6AC;
+}
+
+.tableHeader:hover {
+	transition: background-color 0.4s ease;
+	background-color: #84999F;
 }
 
 .repTableEntry {

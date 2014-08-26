@@ -1,15 +1,15 @@
 <div class="basicContent">
 	<div id="repBlurb">
-	Our repertoire is constantly evolving, and we always keep a few surprises in our back pocket. This list is not exhaustive by any means, but it will give you a good idea of what your can expect to hear. We are always excited to learn your favourites, so let us know if there’s something you’d like to hear!
+	Our repertoire is <i>constantly evolving</i>, and we always keep a few <i>surprises</i> in our back pocket. This list is not exhaustive by any means, but it will give you a good idea of what your can expect to hear. We are always excited to learn <i>your favourites</i>, so let us know if there’s something you’d like to hear!
 	</div>
 
 	<table id="repTable">
-		<tr id="tableHeader">
-			<td class="repTableEntry">Song Title</td>
-			<td class="repTableEntry">Artist</td>
-			<td class="repTableEntry">Decade</td>
+		<tr>
+			<td class="tableHeader" ng-click="sortBy(0)">Song Title</td>
+			<td class="tableHeader" ng-click="sortBy(1)">Artist</td>
+			<td class="tableHeader" ng-click="sortBy(2)">Decade</td>
 		</tr>
-		<tr ng-repeat="i in dataView.getViewRows()">
+		<tr ng-repeat="i in sortedData">
 			<td class="repTableEntry" ng-bind="dataView.getFormattedValue(i, 0)"></td>
 			<td class="repTableEntry" ng-bind="dataView.getFormattedValue(i, 1)"></td>
 			<td class="repTableEntry" ng-bind="dataView.getFormattedValue(i, 2)"></td>

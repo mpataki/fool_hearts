@@ -14,7 +14,12 @@ repertoireCtrl.controller("repertoireCtrl", function($scope) {
 	function handleQueryResponse(data) {
 		$scope.data = data.getDataTable();
 		$scope.dataView = new google.visualization.DataView($scope.data);
+		$scope.sortBy(1);
 		$scope.$apply();
+	}
+
+	$scope.sortBy = function(sort){
+		$scope.sortedData = $scope.dataView.getSortedRows(sort);
 	}
 
 	console.log("repertoireCtrl loaded");
