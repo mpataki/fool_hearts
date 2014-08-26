@@ -3,7 +3,7 @@
 /*font-family: 'Roboto Condensed', sans-serif;*/
 
 body {
-	background-color: #DDE4C5;
+	background-color: #647590;	
 	margin: 0px;
 }
 
@@ -17,10 +17,10 @@ a {
 }
 
 #header {
-	background-color: #647590;
-	background-image: url('../images/brush-strokes.gif');
+	/*background-color: #647590;*/
+	/*background-image: url('../images/brush-strokes.gif');
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-size: 100%;*/
 	text-align: center;
 	font-family: 'Roboto Condensed', sans-serif;
 	color: #E2E1DF;
@@ -28,7 +28,16 @@ a {
 	padding: .2em 0em 0.2em 0em;
 	height: 70vh;
 }
-.valign {
+
+#headerBackground {
+	position: absolute;
+  left: 0px;
+  top: 0px;
+	z-index: -1;
+	width: 100%;
+}
+
+.vhalign {
 	display:table; 
 	margin: auto auto;
 	position: relative;
@@ -51,6 +60,7 @@ a {
 	color: #E2E1DF;
 	line-height: 3em;
 	font-size: large;
+	z-index: 1;
 }
 
 .navItem {
@@ -58,10 +68,10 @@ a {
 	margin-left: 2em;
 }
 
-.content {
+#content {
 	height: 100em;
-	width: 80%;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: white;
+	background-color: #DDE4C5;
 }

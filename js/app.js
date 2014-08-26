@@ -1,5 +1,6 @@
 var FoolHeartsApp = angular.module('FoolHeartsApp', [
 	'ngRoute',
+  'duParallax',
 	'indexCtrl',
   'homeCtrl',
   'mediaCtrl',
