@@ -12,6 +12,10 @@ a {
 	text-decoration: inherit;
 } 
 
+h1 {
+	font-size: x-large;
+}
+
 #mainContainer {
 	outline: 0px;
 }
@@ -97,6 +101,8 @@ a {
 	margin-right: auto;
 	background-color: #DDE4C5;
 	font-family: 'Lato', sans-serif;
+	height: auto;
+	min-height: 100%;
 }
 
 #footer {
@@ -174,4 +180,32 @@ a {
 .repTableEntry {
 	padding-left: 1em;
 	padding-right: 1em;
+}
+
+/**************** WEDDINGS ****************/
+
+#weddingOpeningBlurb {
+	font-size: 110%;
+	padding-top: 1em;
+	padding-bottom: 2em;
+}
+
+#checklist {
+	display: inline-block;
+	float: right;
+	padding: 0.5em;
+	font-family: 'Rock Salt', cursive;
+	background-color: #9FD7C4;
+	width: 30%;
+	margin: 0.6em;
+}
+
+.invisible {
+	transition: opacity 0.4s ease;
+	opacity: 0;
+}
+
+.visible {
+	transition: opacity 0.4s ease;
+	opacity: 1;
 }
