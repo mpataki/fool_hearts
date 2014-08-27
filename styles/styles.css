@@ -209,3 +209,20 @@ h1 {
 	transition: opacity 0.4s ease;
 	opacity: 1;
 }
+
+/**************** CONTACT / QUOTE ****************/
+
+#contactBlurb {
+
+}
+
+#contactInfo {
+	display: inline-block;
+	float: right;
+	padding: 0.5em;
+	background-color: #9FD7C4;
+	width: 30%;
+	margin-left: 0.6em;
+	margin-right: 0.6em;
+	margin-bottom: 0.6em;
+}
