@@ -19,7 +19,7 @@
 	<script type="text/javascript" src="js/mediaCtrl.js"></script>
 	<script type="text/javascript" src="js/repertoireCtrl.js"></script>
 	<script type="text/javascript" src="js/membersCtrl.js"></script>
-	<script type="text/javascript" src="js/yourDayCtrl.js"></script>
+	<script type="text/javascript" src="js/weddingsCtrl.js"></script>
 	<script type="text/javascript" src="js/contactQuoteCtrl.js"></script>
 
 	<!-- STYLE -->
@@ -50,12 +50,30 @@
 		<!-- NAVIGATION BAR -->
 		<div id="navBar">
 			<div style="display:table;margin: 0 auto;"> <!-- div to align navItems horizontally -->	
-				<a href="#/home" 					class="navItem" 	ng-bind="'Home'"></a>
-				<a href="#/media" 				class="navItem" 	ng-bind="'Media'"></a>
-				<a href="#/repertoire" 		class="navItem" 	ng-bind="'Repertoire'"></a>
-				<a href="#/members" 			class="navItem" 	ng-bind="'Members'"></a>
-				<a href="#/your_day" 			class="navItem" 	ng-bind="'Your Day'"></a>
-				<a href="#/contact_quote" class="navItem" 	ng-bind="'Contact / Quote'"></a>
+				<div class="navItem">
+					<a href="#/home" ng-click="setNavSelection(0)" ng-bind="'Home'"></a>
+					<img src="images/dot.png" ng-show="navSelection == 0" width="7px" height="7px" class="selectionDot">
+				</div>
+				<div class="navItem">
+					<a href="#/media" ng-click="setNavSelection(1)" ng-bind="'Media'"></a>
+					<img src="images/dot.png" ng-show="navSelection == 1" width="7px" height="7px" class="selectionDot">
+				</div>
+				<div class="navItem">
+					<a href="#/repertoire" ng-click="setNavSelection(2)" ng-bind="'Repertoire'"></a>
+					<img src="images/dot.png" ng-show="navSelection == 2" width="7px" height="7px" class="selectionDot">
+				</div>
+				<div class="navItem">
+					<a href="#/members" ng-click="setNavSelection(3)" ng-bind="'Members'"></a>
+					<img src="images/dot.png" ng-show="navSelection == 3" width="7px" height="7px" class="selectionDot">
+				</div>
+				<div class="navItem">
+					<a href="#/weddings" ng-click="setNavSelection(4)" ng-bind="'Weddings'"></a>
+					<img src="images/dot.png" ng-show="navSelection == 4" width="7px" height="7px" class="selectionDot">
+				</div>
+				<div class="navItem">
+					<a href="#/contact_quote" ng-click="setNavSelection(5)" ng-bind="'Contact / Quote'"></a>
+					<img src="images/dot.png" ng-show="navSelection == 5" width="7px" height="7px" class="selectionDot" class="selectionDot">
+				</div>
 			</div>
 		</div>
 		
