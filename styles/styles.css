@@ -137,7 +137,7 @@ a {
 
 /**************** HOME ****************/
 
-#openingBlurb {
+#homeContainer {
 	padding: 0.5em;
 	margin: 0.6em;
 	height:	auto;
@@ -225,16 +225,6 @@ a {
 	font-size: 140%;
 }
 
-.invisible {
-	transition: opacity 0.4s ease;
-	opacity: 0;
-}
-
-.visible {
-	transition: opacity 0.4s ease;
-	opacity: 1;
-}
-
 /**************** CONTACT / QUOTE ****************/
 
 #contactBlurb {
@@ -250,4 +240,34 @@ a {
 	margin-left: 0.6em;
 	margin-right: 0.6em;
 	margin-bottom: 0.6em;
+}
+
+/**************** TRANSITIONS ****************/
+
+.invisible {
+	transition: opacity 0.5s ease;
+	opacity: 0;
+}
+
+.visible {
+	transition: opacity 0.5s ease;
+	opacity: 1;
+}
+
+.outLeft {
+	transition: transform 0.5s, opacity 0.5s ease;
+	transform: translateX(-300px);
+	opacity: 0;
+}
+
+.outRight {
+	transition: transform 0.5s, opacity 0.5s ease;
+	transform: translateX(300px);
+	opacity: 0;
+}
+
+.in {
+	transition: transform 0.5s, opacity 0.5s ease;
+	transform: translate(0,0);
+	opacity: 1;
 }
