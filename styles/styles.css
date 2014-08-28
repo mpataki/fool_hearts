@@ -1,10 +1,9 @@
-/* green #9FD7C4 */
-/*font-family: 'Lato', sans-serif;*/
-/*font-family: 'Roboto Condensed', sans-serif;*/
-
 body {
 	background-color: #647590;	
 	margin: 0px;
+	height: auto;
+	min-height: 100%;
+	height: 100%;
 }
 
 a { 
@@ -17,7 +16,11 @@ h1 {
 }
 
 #mainContainer {
-	outline: 0px;
+	position: relative;
+	height: auto; !important
+	height: 100%;
+	min-height: 100%;
+	padding-bottom: 2em;
 }
 
 #header {
@@ -25,6 +28,11 @@ h1 {
 	font-family: 'Roboto Condensed', sans-serif;
 	color: #E2E1DF;
 	font-size: 900%;
+	text-shadow:
+    -1px -1px 0 #252525,
+    1px -1px 0 #252525,
+    -1px 1px 0 #252525,
+    1px 1px 0 #252525;
 	padding: .2em 0em 0.2em 0em;
 	height: 70vh;
 }
@@ -47,7 +55,8 @@ h1 {
 
 .hline { 
 	height: 1px; 
-	background: #fff;
+	background: #E2E1DF;
+	border:	1px solid #252525;
 }
 
 .hline2 { 
@@ -101,11 +110,16 @@ h1 {
 	margin-right: auto;
 	background-color: #DDE4C5;
 	font-family: 'Lato', sans-serif;
-	height: auto;
-	min-height: 100%;
+	padding-bottom: 1em;
+}
+
+#footerBarrier {
+	clear: both;
 }
 
 #footer {
+	position: absolute;
+	bottom: 0;
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
@@ -113,7 +127,9 @@ h1 {
 	font-family: 'Lato', sans-serif;
 	font-size: small;
 	text-align: center;
-	padding: 1em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	border-top: 1px solid #252525;
 }
 
 .basicContent {
@@ -121,38 +137,34 @@ h1 {
 	margin-right: auto;
 	width: 80vw;
 	padding: 1em;
+	height: 100%;
 }
 
 /**************** HOME ****************/
 
-#homeRow1 {
-	height: 18em;
-}
-
-#blurb {
-	width: 38%;
-	float: left;
-
-	display:table; 
-  transform: translateY(20%);
+#openingBlurb {
+	padding: 0.5em;
+	margin: 0.6em;
+	height:	auto;
 }
 
 #carousel {
-	width: 61%;
-	height: 100%;
-	background-color: white;
+	display: inline-block;
 	float: right;
-}
-
-#homeRow2 {
-	padding-top: 2em;
-	padding-bottom: 1em;
+	width: 68%;
+	height: 25em;
+	padding: 0.5em;
+	padding-top: 0;
+	margin: 0.6em;
+	margin-top: 0;
+	background-color: #9FD7C4;
 }
 
 /**************** REPERTOIRE ****************/
 
 #repBlurb {
 	padding: 1em;
+	margin-bottom: 1em;
 }
 
 #repTable {
@@ -180,6 +192,17 @@ h1 {
 .repTableEntry {
 	padding-left: 1em;
 	padding-right: 1em;
+}
+
+#request {
+	display: inline;
+	float: right;
+	width: 25%;
+	padding: 0.5em;
+	background-color: #9FD7C4;
+	margin-left: 0.6em;
+	margin-right: 0.6em;
+	margin-bottom: 0.6em;
 }
 
 /**************** WEDDINGS ****************/

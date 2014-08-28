@@ -1,18 +1,44 @@
-<div class="basicContent">
+<div class="basicContent" ng-controller="repertoireCtrl">
 	<div id="repBlurb">
 	Our repertoire is <i>constantly evolving</i>, and we always keep a few <i>surprises</i> in our back pocket. This list is not exhaustive by any means, but it will give you a good idea of what your can expect to hear. We are always excited to learn <i>your favourites</i>, so let us know if there’s something you’d like to hear!
 	</div>
+	<div>
 
-	<table id="repTable">
-		<tr>
-			<td class="tableHeader" ng-click="sortBy(0)">Song Title</td>
-			<td class="tableHeader" ng-click="sortBy(1)">Artist</td>
-			<td class="tableHeader" ng-click="sortBy(2)">Decade</td>
-		</tr>
-		<tr ng-repeat="i in sortedData">
-			<td class="repTableEntry" ng-bind="dataView.getFormattedValue(i, 0)"></td>
-			<td class="repTableEntry" ng-bind="dataView.getFormattedValue(i, 1)"></td>
-			<td class="repTableEntry" ng-bind="dataView.getFormattedValue(i, 2)"></td>
-		</tr>
-	</table>
+		<div id="request">
+			<div style="text-align: center">
+				Have a song request?<br>
+				Let us know!<br><br>
+			</div>
+			<div class="hline2"></div>
+			<br>
+			<form novalidate class="simple-form">
+				<table>
+					<tr>
+						<td>Song Title:</td>
+						<td><input type="text" ng-model="request.title" /></td>
+					</tr>
+					<tr>
+						<td>Artist:</td>
+						<td><input type="text" ng-model="request.artist" /></td>
+					</tr>
+				</table>
+		    	<div style="text-align:center;">
+						<button ng-click="submitRequest()">Submit</button>
+					</div>
+	  	</form>
+		</div>
+
+		<table id="repTable">
+			<tr>
+				<td class="tableHeader" ng-click="sortBy(0)">Song Title</td>
+				<td class="tableHeader" ng-click="sortBy(1)">Artist</td>
+				<td class="tableHeader" ng-click="sortBy(2)">Decade</td>
+			</tr>
+			<tr ng-repeat="i in sortedData">
+				<td class="repTableEntry" ng-bind="dataView.getFormattedValue(i, 0)"></td>
+				<td class="repTableEntry" ng-bind="dataView.getFormattedValue(i, 1)"></td>
+				<td class="repTableEntry" ng-bind="dataView.getFormattedValue(i, 2)"></td>
+			</tr>
+		</table>
+	</div>
 </div>

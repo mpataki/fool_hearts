@@ -22,5 +22,11 @@ repertoireCtrl.controller("repertoireCtrl", function($scope) {
 		$scope.sortedData = $scope.dataView.getSortedRows(sort);
 	}
 
+	$scope.request = {'title': '', 'artist': ''}
+	$scope.submitRequest = function(){
+		console.log($scope.request.title);
+		console.log($scope.request.artist);
+	}
+
 	console.log("repertoireCtrl loaded");
 });
