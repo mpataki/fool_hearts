@@ -11,10 +11,6 @@ a {
 	text-decoration: inherit;
 } 
 
-h1 {
-	font-size: x-large;
-}
-
 #mainContainer {
 	position: relative;
 	height: auto; !important
@@ -121,8 +117,6 @@ h1 {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
 	background-color: #DDE4C5;
 	font-family: 'Lato', sans-serif;
 	font-size: small;
@@ -130,6 +124,8 @@ h1 {
 	padding-top: 1em;
 	padding-bottom: 1em;
 	border-top: 1px solid #252525;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .basicContent {
@@ -220,7 +216,14 @@ h1 {
 	font-family: 'Rock Salt', cursive;
 	background-color: #9FD7C4;
 	width: 30%;
+	height: 100%;
 	margin: 0.6em;
+}
+
+.wedItem {
+	margin-top: 1em;
+	margin-bottom: 0;
+	font-size: 140%;
 }
 
 .invisible {
