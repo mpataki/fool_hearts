@@ -5,10 +5,10 @@ google.setOnLoadCallback(function() {
 
 var repertoireCtrl = angular.module('repertoireCtrl', []);
 
-repertoireCtrl.controller("repertoireCtrl", function($scope) {
+repertoireCtrl.controller('repertoireCtrl', function($scope) {
 
 	var query = new google.visualization.Query("https://docs.google.com/spreadsheets/d/1_pV6hj090t0agtIv0wfCe_Kc5yJxo9eKkPWr_aODmKA/edit#gid=0");
-	query.setQuery('select *');
+	query.setQuery('select A,B,C');
 	query.send(handleQueryResponse);
 
 	function handleQueryResponse(data) {
@@ -20,12 +20,6 @@ repertoireCtrl.controller("repertoireCtrl", function($scope) {
 
 	$scope.sortBy = function(sort){
 		$scope.sortedData = $scope.dataView.getSortedRows(sort);
-	}
-
-	$scope.request = {'title': '', 'artist': ''}
-	$scope.submitRequest = function(){
-		console.log($scope.request.title);
-		console.log($scope.request.artist);
 	}
 
 	console.log("repertoireCtrl loaded");
