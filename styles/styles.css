@@ -50,7 +50,7 @@ a {
 }
 
 .hline { 
-	height: 1px; 
+	height: 2px; 
 	background: #E2E1DF;
 	border:	1px solid #252525;
 }
@@ -104,6 +104,7 @@ a {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 1.5em;
 	background-color: #DDE4C5;
 	font-family: 'Lato', sans-serif;
 	padding-bottom: 1em;
@@ -121,9 +122,7 @@ a {
 	font-family: 'Lato', sans-serif;
 	font-size: small;
 	text-align: center;
-	padding-top: 1em;
 	padding-bottom: 1em;
-	border-top: 1px solid #252525;
 	margin-left: auto;
 	margin-right: auto;
 }
