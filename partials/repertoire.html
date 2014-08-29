@@ -13,18 +13,18 @@
 			<br>
 
 	  	<form novalidate class="simple-form" action="https://docs.google.com/forms/d/1JmvaIO9eO61Wt9XAl7DQ_Bdx2d7j5Ax69NsSu_DwFz4/formResponse" method="POST" target="hiddenFrame">
-				<table>
+				<table style="margin-left:auto;margin-right:auto;">
 					<tr>
 						<td>Song Title:</td>
-						<td><input type="text" name="entry.26000734" value="" dir="auto" aria-label="Song Title" title="" ng-model="request.title"></td>
+						<td><input type="text" name="entry.26000734" value="" dir="auto" aria-label="Song Title" ng-model="request.title" class="textInput"></td>
 					</tr>
 					<tr>
 						<td>Artist:</td>
-						<td><input type="text" name="entry.1580561161" value="" dir="auto" aria-label="Artist Name" title="" ng-model="request.name"></td>
+						<td><input type="text" name="entry.1580561161" value="" dir="auto" aria-label="Artist Name" ng-model="request.name" class="textInput"></td>
 					</tr>
 				</table>
 		    	<div style="text-align:center;">
-		    		<input type="submit" name="submit" value="Submit" ng-click="requestResponse()">
+		    		<input type="submit" name="submit" value="Submit" ng-click="requestResponse()" class="submitButton">
 					</div>
 	  	</form>
 	  	<div ng-show="response" style="text-align: center;" ng-bind="response"></div>

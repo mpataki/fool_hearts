@@ -67,7 +67,9 @@ a {
 }
 
 .socialLink {
-	padding: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	float: left;
 }
 
 #navBar {
@@ -204,6 +206,15 @@ a {
 	margin-left: 0.6em;
 	margin-right: 0.6em;
 	margin-bottom: 0.6em;
+}
+
+.textInput {
+
+}
+
+.submitButton {
+	border: 0;
+	
 }
 
 /**************** WEDDINGS ****************/
