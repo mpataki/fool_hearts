@@ -11,6 +11,7 @@ repertoireCtrl.controller('repertoireCtrl', function($scope) {
 	$scope.repBlurbInView = false;
 	$scope.repTableInView = false;
 	$scope.repTableLoaded = false;
+	$scope.showRequestResponse = false;
 
 	var query = new google.visualization.Query("https://docs.google.com/spreadsheets/d/1_pV6hj090t0agtIv0wfCe_Kc5yJxo9eKkPWr_aODmKA/edit#gid=0");
 	query.setQuery('select A,B,C');
@@ -26,6 +27,15 @@ repertoireCtrl.controller('repertoireCtrl', function($scope) {
 
 	$scope.sortBy = function(sort){
 		$scope.sortedData = $scope.dataView.getSortedRows(sort);
+	}
+
+	$scope.request = {title: '', name: ''};
+	$scope.response = '';
+	$scope.requestResponse = function(){
+		if ( $scope.request.title || $scope.request.artist )
+			$scope.response = 'Your request has been received. Thanks!'
+		else
+			$scope.response = 'Oops, enter a song above and try again.'
 	}
 
 	$scope.$on('navigateAway', function(){

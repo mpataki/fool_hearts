@@ -12,22 +12,22 @@
 			<div class="hline2"></div>
 			<br>
 
-	  	<form novalidate class="simple-form" action="https://docs.google.com/forms/d/1JmvaIO9eO61Wt9XAl7DQ_Bdx2d7j5Ax69NsSu_DwFz4/formResponse" method="POST" target="_blank">
+	  	<form novalidate class="simple-form" action="https://docs.google.com/forms/d/1JmvaIO9eO61Wt9XAl7DQ_Bdx2d7j5Ax69NsSu_DwFz4/formResponse" method="POST" target="hiddenFrame">
 				<table>
 					<tr>
 						<td>Song Title:</td>
-						<td><input type="text" name="entry.26000734" value="" dir="auto" aria-label="Song Title" title=""></td>
+						<td><input type="text" name="entry.26000734" value="" dir="auto" aria-label="Song Title" title="" ng-model="request.title"></td>
 					</tr>
 					<tr>
 						<td>Artist:</td>
-						<td><input type="text" name="entry.1580561161" value="" dir="auto" aria-label="Artist Name" title=""></td>
+						<td><input type="text" name="entry.1580561161" value="" dir="auto" aria-label="Artist Name" title="" ng-model="request.name"></td>
 					</tr>
 				</table>
 		    	<div style="text-align:center;">
-		    		<input type="submit" name="submit" value="Submit">
+		    		<input type="submit" name="submit" value="Submit" ng-click="requestResponse()">
 					</div>
 	  	</form>
-
+	  	<div ng-show="response" style="text-align: center;" ng-bind="response"></div>
 		</div>
 
 		<table id="repTable" class="invisible" ng-class="{visible: repTableInView && repTableLoaded}" in-view="repTableInView = true">
@@ -43,4 +43,5 @@
 			</tr>
 		</table>
 	</div>
+	<iframe name="hiddenFrame" style="width:0;height:0;opacity:0;"></iframe>
 </div>

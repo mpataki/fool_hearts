@@ -31,6 +31,7 @@ indexCtrl.controller('indexCtrl', function($scope, $rootScope, $location, parall
 	$scope.location = $location;	// again, weird that I have to do this to get access to the $location service inside the function below
 	$scope.rootScope = $rootScope;
 	$scope.setNavSelection = function(selection){
+		if ($scope.navSelection == selection ) return;
 		$scope.navSelection = selection;
 		$scope.rootScope.$broadcast('navigateAway');
 		setTimeout(
