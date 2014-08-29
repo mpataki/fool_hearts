@@ -1,10 +1,10 @@
 <div class="basicContent" ng-controller="repertoireCtrl">
-	<div id="repBlurb">
+	<div id="repBlurb" class="invisible" ng-class="{visible: repBlurbInView}" in-view="repBlurbInView = true">
 	Our repertoire is <i>constantly evolving</i>, and we always keep a few <i>surprises</i> in our back pocket. This list is not exhaustive by any means, but it will give you a good idea of what your can expect to hear. We are always excited to learn <i>your favourites</i>, so let us know if there’s something you’d like to hear!
 	</div>
 	<div>
 
-		<div id="request">
+		<div id="request" class="invisible" ng-class="{visible: requestInView}" in-view="requestInView = true">
 			<div style="text-align: center">
 				Have a song request?<br>
 				Let us know!<br><br>
@@ -30,7 +30,7 @@
 
 		</div>
 
-		<table id="repTable">
+		<table id="repTable" class="invisible" ng-class="{visible: repTableInView && repTableLoaded}" in-view="repTableInView = true">
 			<tr>
 				<td class="tableHeader" ng-click="sortBy(0)">Song Title</td>
 				<td class="tableHeader" ng-click="sortBy(1)">Artist</td>

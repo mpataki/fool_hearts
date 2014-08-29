@@ -1,45 +1,61 @@
 <div class="basicContent" ng-controller="weddingsCtrl">
-	<div id="checklist">
+	<div id="checklist" class="invisible" ng-class="{visible: checklistIn}" in-view="checklistIn = true">
 		<div style="text-align: center;">Checklist</div>
 		<div class="hline2"></div>
 		<div style="font-size:small;">
-			<div ng-class="{visible: elmInView[0]}" class="invisible">- # of sets & length</div>
-			<div ng-class="{visible: elmInView[1]}" class="invisible">- ceremony music?</div>
-			<div ng-class="{visible: elmInView[2]}" class="invisible">- Special dances?</div>
-			<div ng-class="{visible: elmInView[3]}" class="invisible">- house music?</div>
-			<div ng-class="{visible: elmInView[4]}" class="invisible">- sound system for speeches / ceremony?</div>
-			<div ng-class="{visible: elmInView[5]}" class="invisible">- itinerary</div>
-			<div ng-class="{visible: elmInView[6]}" class="invisible">- floor plan</div>
-			<div ng-class="{visible: elmInView[7]}" class="invisible">- Hall contact info</div>
+			<div ng-class="{visible: CheckboxItemInView[0]}" class="invisible">- # of sets & length</div>
+			<div ng-class="{visible: CheckboxItemInView[1]}" class="invisible">- ceremony music?</div>
+			<div ng-class="{visible: CheckboxItemInView[2]}" class="invisible">- Special dances?</div>
+			<div ng-class="{visible: CheckboxItemInView[3]}" class="invisible">- house music?</div>
+			<div ng-class="{visible: CheckboxItemInView[4]}" class="invisible">- sound system for speeches / ceremony?</div>
+			<div ng-class="{visible: CheckboxItemInView[5]}" class="invisible">- itinerary</div>
+			<div ng-class="{visible: CheckboxItemInView[6]}" class="invisible">- floor plan</div>
+			<div ng-class="{visible: CheckboxItemInView[7]}" class="invisible">- Hall contact info</div>
 		</div>
 	</div>
 
-	<div id="weddingOpeningBlurb">
+	<div id="weddingOpeningBlurb" class="invisible" ng-class="{visible: weddingBlurbIn}" in-view="weddingBlurbIn = true">
 		Your wedding is the most <i>important day ever</i>, and we intend to make it easy on you. A few questions now, and nothing but great music, smooth transitions, and a full dance floor on your day.
 	</div>
 	
-	<div class="wedItem" in-view="elmInView[0] = true">How many sets would you like us to play, and how long do you want them?</div>
+	<div class="wedItem invisible" ng-class="{visible: CheckboxItemInView[0]}" in-view="CheckboxItemInView[0] = true">How many sets would you like us to play, and how long do you want them?</div>
+	<div class="invisible" ng-class="{visible: CheckboxItemInView[0]}">
   Most couples want 3 sets of about 45 minutes to an hour. We’re happy to play as much as you want - we’re pretty into that ki	of thing.
+  </div>
 
-	<div class="wedItem" in-view="elmInView[1] = true">Would you like us to play the ceremony as well as the reception?</div>
-	In addition to bringing the party, we also bring the soft and pretty. In the past we have provided ceremonies with acoustic guitar instrumental music, soft male and / or female vocals, and even some more traditional piano music. Add a beautiful bride, and there won’t be a dry eye in the place. 
+	<div class="wedItem invisible" ng-class="{visible: CheckboxItemInView[1]}" in-view="CheckboxItemInView[1] = true">Would you like us to play the ceremony as well as the reception?</div>
+	<div class="invisible" ng-class="{visible: CheckboxItemInView[1]}">
+	In addition to bringing the party, we also bring the soft and pretty. In the past we have provided ceremonies with acoustic guitar instrumental music, soft male and / or female vocals, and even some more traditional piano music. Add a beautiful bride, and there won’t be a dry eye in the place.
+	</div>
 
-	<div class="wedItem" in-view="elmInView[2] = true">Would you like us to play any special dances?</div>
+	<div class="wedItem invisible" ng-class="{visible: CheckboxItemInView[2]}" in-view="CheckboxItemInView[2] = true">Would you like us to play any special dances?</div>
+	<div class="invisible" ng-class="{visible: CheckboxItemInView[2]}">
 	We would be honoured. Let us know what songs you want and we’ll make sure they are perfect.
+	</div>
 
 
-	<div class="wedItem" in-view="elmInView[3] = true">Would you like us to provide house music between sets?</div>
+	<div class="wedItem invisible" ng-class="{visible: CheckboxItemInView[3]}" in-view="CheckboxItemInView[3] = true">Would you like us to provide house music between sets?</div>
+	<div class="invisible" ng-class="{visible: CheckboxItemInView[3]}">
 	We are happy to provide music for between sets, just let us know what you’d like to hear, otherwise we’ll make an educated guess. If you have a DJ, kindly pass along some contact information so we can share our song choices. That way you don’t end up hearing the same song more than once.
+	</div>
 
-	<div class="wedItem" in-view="elmInView[4] = true">Would you like to use our sound system for the speeches, or during the ceremony?</div>
+	<div class="wedItem invisible" ng-class="{visible: CheckboxItemInView[4]}" in-view="CheckboxItemInView[4] = true">Would you like to use our sound system for the speeches, or during the ceremony?</div>
+	<div class="invisible" ng-class="{visible: CheckboxItemInView[4]}">
 	Most reception halls want us to supply our own sound system - no problem. Just let us know if you need it for anything else.
+	</div>
 
-	<div class="wedItem" in-view="elmInView[5] = true">Planning an itinerary? Pass it along.</div>
+	<div class="wedItem invisible" ng-class="{visible: CheckboxItemInView[5]}" in-view="CheckboxItemInView[5] = true">Planning an itinerary? Pass it along.</div>
+	<div class="invisible" ng-class="{visible: CheckboxItemInView[5]}">
 	That way we know where to be and when without needing to ask.
+	</div>
 
-	<div class="wedItem" in-view="elmInView[6] = true">Got a floor plan? We could use a copy of that too.</div>
+	<div class="wedItem invisible" ng-class="{visible: CheckboxItemInView[6]}" in-view="CheckboxItemInView[6] = true">Got a floor plan? We could use a copy of that too.</div>
+	<div class="invisible" ng-class="{visible: CheckboxItemInView[6]}">
 	We like to get to the hall nice and early so we can test our gear without disturbing anyone, but this means that we’ll need to know where you'll want us. A rough sketch or even a written description is all we need.
+	</div>
 
-	<div class="wedItem" in-view="elmInView[7] = true">Lastly, some logistics with the hall.</div>
+	<div class="wedItem invisible" ng-class="{visible: CheckboxItemInView[7]}" in-view="CheckboxItemInView[7] = true">Lastly, some logistics with the hall.</div>
+	<div class="invisible" ng-class="{visible: CheckboxItemInView[7]}">
 	Like any band, our equipment needs power, so we'll need to coordinate with the hall to ensure that we have access to all the outlets we need. Just pass along the name of the hall and we’ll work it all out with them.
+	</div>
 </div>

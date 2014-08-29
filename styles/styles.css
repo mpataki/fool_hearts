@@ -47,6 +47,7 @@ a {
 	position: relative;
   top: 40%;
   transform: translateY(-50%);
+  -webkit-transform: translate(0, -50%);
 }
 
 .hline { 
@@ -84,13 +85,16 @@ a {
 	margin-right: 1em;
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
+	cursor: pointer;
 
 	transition: color 0.4s ease;
+	-webkit-transition: color 0.4s ease; /* For Safari 3.1 to 6.0 */
 	color: #E2E1DF;
 }
 
 .navItem:hover {
 	transition: color 0.4s ease;
+	-webkit-transition: color 0.4s ease; /* For Safari 3.1 to 6.0 */
 	color: white;
 }
 
@@ -176,11 +180,13 @@ a {
 	padding-right: 1em;
 	cursor: pointer;
 	transition: background-color 0.4s ease;
+	-webkit-transition: background-color 0.4s ease; /* For Safari 3.1 to 6.0 */
 	background-color: #B7C6AC;
 }
 
 .tableHeader:hover {
 	transition: background-color 0.4s ease;
+	-webkit-transition: background-color 0.4s ease; /* For Safari 3.1 to 6.0 */
 	background-color: #84999F;
 }
 
@@ -227,10 +233,6 @@ a {
 
 /**************** CONTACT / QUOTE ****************/
 
-#contactBlurb {
-
-}
-
 #contactInfo {
 	display: inline-block;
 	float: right;
@@ -246,28 +248,37 @@ a {
 
 .invisible {
 	transition: opacity 0.5s ease;
+	-webkit-transition: opacity 0.5s ease; /* For Safari 3.1 to 6.0 */
 	opacity: 0;
 }
 
 .visible {
 	transition: opacity 0.5s ease;
+	-webkit-transition: opacity 0.5s ease; /* For Safari 3.1 to 6.0 */
 	opacity: 1;
 }
 
+/* really would like to get these to work in safari... */
 .outLeft {
 	transition: transform 0.5s, opacity 0.5s ease;
+	-webkit-transition: transform 0.5s, opacity 0.5s ease; /* For Safari 3.1 to 6.0 */
 	transform: translateX(-300px);
+	-webkit-transform: translate(-300px, 0);
 	opacity: 0;
 }
 
 .outRight {
 	transition: transform 0.5s, opacity 0.5s ease;
+	-webkit-transition: transform 0.5s, opacity 0.5s ease; /* For Safari 3.1 to 6.0 */
 	transform: translateX(300px);
+	-webkit-transform: translate(300px, 0);
 	opacity: 0;
 }
 
 .in {
 	transition: transform 0.5s, opacity 0.5s ease;
+	-webkit-transition: transform 0.5s, opacity 0.5s ease; /* For Safari 3.1 to 6.0 */
 	transform: translate(0,0);
+	-webkit-transform: translate(0,0);
 	opacity: 1;
 }

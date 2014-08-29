@@ -1,9 +1,9 @@
 <div class="basicContent" ng-controller="contactQuoteCtrl">
-	<div id="contactBlurb">
-		<div id="contactInfo">
-			E-mail: band@foolhearts.com<br>
-			Facebook: Some direct facebook message link<br>
-		</div>
+	<div id="contactInfo" class="invisible" ng-class="{visible: contactInfoInView}" in-view="contactInfoInView = true">
+		E-mail: band@foolhearts.com<br>
+		Facebook: Some direct facebook message link<br>
+	</div>
+	<div class="invisible" ng-class="{visible: contactBlurbInView}" in-view="contactBlurbInView = true">
 		Depending on <i>your needs and budget</i>, we can send the whole crew or just a couple members. Our goal is to be as <i>flexible as possible</i>, so shoot us a message, tell us what you have in mind, and we’ll get back to you shortly.
 	</div>
 </div>
