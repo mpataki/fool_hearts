@@ -1,47 +1,45 @@
-<div  ng-controller="repertoireCtrl">
-	<div id="repBlurb" class="invisible" ng-class="{visible: repBlurbInView}" in-view="repBlurbInView = true">
-	Our repertoire is <i>constantly evolving</i>, and we always keep a few <i>surprises</i> in our back pocket. This list is not exhaustive by any means, but it will give you a good idea of what your can expect to hear. We are always excited to learn <i>your favourites</i>, so let us know if there’s something you’d like to hear!
-	</div>
-	<div>
-
-		<div id="request" class="invisible" ng-class="{visible: requestInView}" in-view="requestInView = true">
-			<div style="text-align: center">
-				Have a song request?<br>
-				Let us know!<br><br>
-			</div>
-			<div class="hline2"></div>
-			<br>
-
-	  	<form novalidate class="simple-form" action="https://docs.google.com/forms/d/1JmvaIO9eO61Wt9XAl7DQ_Bdx2d7j5Ax69NsSu_DwFz4/formResponse" method="POST" target="hiddenFrame">
-				<table style="margin-left:auto;margin-right:auto;">
-					<tr>
-						<td>Song Title:</td>
-						<td><input type="text" name="entry.26000734" value="" dir="auto" aria-label="Song Title" ng-model="request.title" class="textInput"></td>
-					</tr>
-					<tr>
-						<td>Artist:</td>
-						<td><input type="text" name="entry.1580561161" value="" dir="auto" aria-label="Artist Name" ng-model="request.name" class="textInput"></td>
-					</tr>
-				</table>
-		    	<div style="text-align:center;">
-		    		<input type="submit" name="submit" value="Submit" ng-click="requestResponse()" class="submitButton">
-					</div>
-	  	</form>
-	  	<div ng-show="response" style="text-align: center;" ng-bind="response"></div>
-		</div>
-
-		<table id="repTable" class="invisible" ng-class="{visible: repTableInView && repTableLoaded}" in-view="repTableInView = true">
-			<tr>
-				<td class="tableHeader" ng-click="sortBy(0)">Song Title</td>
-				<td class="tableHeader" ng-click="sortBy(1)">Artist</td>
-				<td class="tableHeader" ng-click="sortBy(2)">Decade</td>
-			</tr>
-			<tr ng-repeat="i in sortedData">
-				<td class="repTableEntry" ng-bind="dataView.getFormattedValue(i, 0)"></td>
-				<td class="repTableEntry" ng-bind="dataView.getFormattedValue(i, 1)"></td>
-				<td class="repTableEntry" ng-bind="dataView.getFormattedValue(i, 2)"></td>
-			</tr>
-		</table>
-	</div>
-	<iframe name="hiddenFrame" style="width:0;height:0;opacity:0;"></iframe>
+<div id="repBlurb" class="invisible" ng-class="{visible: repBlurbInView}" in-view="repBlurbInView = true">
+Our repertoire is <i>constantly evolving</i>, and we always keep a few <i>surprises</i> in our back pocket. This list is not exhaustive by any means, but it will give you a good idea of what your can expect to hear. We are always excited to learn <i>your favourites</i>, so let us know if there’s something you’d like to hear!
 </div>
+<div>
+
+	<div id="request" class="invisible" ng-class="{visible: requestInView}" in-view="requestInView = true">
+		<div style="text-align: center">
+			Have a song request?<br>
+			Let us know!<br><br>
+		</div>
+		<div class="hline2"></div>
+		<br>
+
+  	<form novalidate class="simple-form" action="https://docs.google.com/forms/d/1JmvaIO9eO61Wt9XAl7DQ_Bdx2d7j5Ax69NsSu_DwFz4/formResponse" method="POST" target="hiddenFrame">
+			<table style="margin-left:auto;margin-right:auto;">
+				<tr>
+					<td>Song Title:</td>
+					<td><input type="text" name="entry.26000734" value="" dir="auto" aria-label="Song Title" ng-model="request.title" class="textInput"></td>
+				</tr>
+				<tr>
+					<td>Artist:</td>
+					<td><input type="text" name="entry.1580561161" value="" dir="auto" aria-label="Artist Name" ng-model="request.name" class="textInput"></td>
+				</tr>
+			</table>
+	    	<div style="text-align:center;">
+	    		<input type="submit" name="submit" value="Submit" ng-click="requestResponse()" class="submitButton">
+				</div>
+  	</form>
+  	<div ng-show="response" style="text-align: center;" ng-bind="response"></div>
+	</div>
+
+	<table id="repTable" class="invisible" ng-class="{visible: repTableInView && repTableLoaded}" in-view="repTableInView = true">
+		<tr>
+			<td class="tableHeader" ng-click="sortBy(0)">Song Title</td>
+			<td class="tableHeader" ng-click="sortBy(1)">Artist</td>
+			<td class="tableHeader" ng-click="sortBy(2)">Decade</td>
+		</tr>
+		<tr ng-repeat="i in sortedData">
+			<td class="repTableEntry" ng-bind="dataView.getFormattedValue(i, 0)"></td>
+			<td class="repTableEntry" ng-bind="dataView.getFormattedValue(i, 1)"></td>
+			<td class="repTableEntry" ng-bind="dataView.getFormattedValue(i, 2)"></td>
+		</tr>
+	</table>
+</div>
+<iframe name="hiddenFrame" style="width:0;height:0;opacity:0;"></iframe>

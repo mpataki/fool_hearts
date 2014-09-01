@@ -30,7 +30,7 @@ a {
     -1px 1px 0 #252525,
     1px 1px 0 #252525;
 	padding: .2em 0em 0.2em 0em;
-	height: 70vh;
+	height: 80vh;
 }
 
 #headerBackground {
@@ -213,8 +213,7 @@ a {
 }
 
 .submitButton {
-	border: 0;
-	
+
 }
 
 /**************** WEDDINGS ****************/
