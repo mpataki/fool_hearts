@@ -61,17 +61,6 @@ a {
 	background-color: #252525;
 }
 
-#socialLinks {
-	display:table;
-	margin: 0 auto;
-}
-
-.socialLink {
-	padding-left: 1em;
-	padding-right: 1em;
-	float: left;
-}
-
 #navBar {
 	background-color: #252525;
 	width: 100%;
@@ -116,29 +105,40 @@ a {
 	padding-bottom: 1em;
 }
 
-#footerBarrier {
-	clear: both;
-}
-
-#footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	background-color: #DDE4C5;
-	font-family: 'Lato', sans-serif;
-	font-size: small;
-	text-align: center;
-	padding-bottom: 1em;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 .basicContent {
 	margin-left: auto;
 	margin-right: auto;
 	width: 80vw;
 	padding: 1em;
 	height: 100%;
+}
+
+#footerBarrier {
+	clear: both;
+}
+
+#footer {
+	bottom: 0;
+	width: 100%;
+	background-color: #DDE4C5;
+	font-family: 'Lato', sans-serif;
+	font-size: small;
+	text-align: center;
+	/*padding-bottom: 1em;*/
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#socialLinks {
+	display:table;
+	margin: 0 auto;
+	padding-top: 1em;
+}
+
+.socialLink {
+	padding-left: 1em;
+	padding-right: 1em;
+	float: left;
 }
 
 /**************** HOME ****************/
