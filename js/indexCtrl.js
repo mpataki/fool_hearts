@@ -1,6 +1,6 @@
 var indexCtrl = angular.module('indexCtrl', ['ngRoute', 'duParallax']);
 
-indexCtrl.controller('indexCtrl', function($scope, $rootScope, $location, parallaxHelper) {
+indexCtrl.controller('indexCtrl', function($scope, $rootScope, $location, $anchorScroll, parallaxHelper) {
 
 	switch($location.$$path){
 		case '/home':
@@ -30,37 +30,49 @@ indexCtrl.controller('indexCtrl', function($scope, $rootScope, $location, parall
 
 	$scope.location = $location;	// again, weird that I have to do this to get access to the $location service inside the function below
 	$scope.rootScope = $rootScope;
+	$scope.anchorScroll = $anchorScroll;
+
+	var navigate = function(selection){
+		switch(selection){
+			case 0:
+				$scope.location.path('/home');
+				break;
+			case 1:
+				$scope.location.path('/media');
+				break;
+			case 2:
+				$scope.location.path('/repertoire');
+				break;
+			case 3:
+				$scope.location.path('/members');
+				break;
+			case 4:
+				$scope.location.path('/weddings');
+				break;
+			case 5:
+				$scope.location.path('/contact_quote');
+				break;
+			default:
+				$scope.location.path('/home');
+		}
+		
+		if ( $scope.location.hash() != 'content' ) {
+			$scope.location.hash('content');
+			$scope.anchorScroll();
+		}
+	}
+
 	$scope.setNavSelection = function(selection){
 		if ($scope.navSelection == selection ) return;
 		$scope.navSelection = selection;
 		$scope.rootScope.$broadcast('navigateAway');
-		setTimeout(
-			function(){
-				switch(selection){
-					case 0:
-						$scope.location.path('/home');
-						break;
-					case 1:
-						$scope.location.path('/media');
-						break;
-					case 2:
-						$scope.location.path('/repertoire');
-						break;
-					case 3:
-						$scope.location.path('/members');
-						break;
-					case 4:
-						$scope.location.path('/weddings');
-						break;
-					case 5:
-						$scope.location.path('/contact_quote');
-						break;
-					default:
-						$scope.location.path('/home');
-				}
+		if ( $scope.location.hash() != 'content' )
+			navigate(selection);
+		else
+			setTimeout( function(){
+				navigate(selection);
 				$scope.$apply();
-			}
-		, 500);
+			}, 500);
 	}
 
 	console.log("indexCtrl loaded");
