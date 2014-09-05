@@ -31,9 +31,30 @@ Our repertoire is <i>constantly evolving</i>, and we always keep a few <i>surpri
 
 	<table id="repTable" class="invisible" ng-class="{visible: repTableInView && repTableLoaded}" in-view="repTableInView = true">
 		<tr>
-			<td class="tableHeader" ng-click="sortBy(0)">Song Title</td>
-			<td class="tableHeader" ng-click="sortBy(1)">Artist</td>
-			<td class="tableHeader" ng-click="sortBy(2)">Decade</td>
+			<td class="tableHeader" ng-click="sortBy(0)">
+				<table>
+					<tr>
+						<td>Song Title</td>
+						<td><img src="images/arrow.png" weidth="14" height="14" class="invisible" ng-class="{visible: sortCol == 0}"/></td>
+					</tr>
+				</table>
+			</td>
+			<td class="tableHeader" ng-click="sortBy(1)">
+				<table>
+					<tr>
+						<td>Artist</td>
+						<td><img src="images/arrow.png" weidth="14" height="14" class="invisible" ng-class="{visible: sortCol == 1}"/></td>
+					</tr>
+				</table>
+			</td>
+			<td class="tableHeader" ng-click="sortBy(2)">
+				<table>
+					<tr>
+						<td>Decade</td>
+						<td><img src="images/arrow.png" weidth="14" height="14" class="invisible" ng-class="{visible: sortCol == 2}"/></td>
+					</tr>
+				</table>
+			</td>
 		</tr>
 		<tr ng-repeat="i in sortedData">
 			<td class="repTableEntry" ng-bind="dataView.getFormattedValue(i, 0)"></td>
