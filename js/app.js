@@ -3,7 +3,7 @@ var FoolHeartsApp = angular.module('FoolHeartsApp', [
   'duParallax',
 	'indexCtrl',
   'homeCtrl',
-  'mediaCtrl',
+  'testimonialsCtrl',
   'repertoireCtrl',
   'membersCtrl',
   'weddingsCtrl',
@@ -17,9 +17,9 @@ FoolHeartsApp.config(['$routeProvider',
         templateUrl: 'partials/home.html',
         controller: 'homeCtrl'
       }).
-      when('/media', {
-        templateUrl: 'partials/media.html',
-        controller: 'mediaCtrl'
+      when('/testimonials', {
+        templateUrl: 'partials/testimonials.html',
+        controller: 'testimonialsCtrl'
       }).
       when('/repertoire', {
         templateUrl: 'partials/repertoire.html',

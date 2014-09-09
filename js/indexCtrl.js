@@ -6,7 +6,7 @@ indexCtrl.controller('indexCtrl', function($scope, $rootScope, $location, $ancho
 		case '/home':
 			$scope.navSelection = 0;
 			break;
-		case '/media':
+		case '/testimonials':
 			$scope.navSelection = 1;
 			break;
 		case '/repertoire':
@@ -38,7 +38,7 @@ indexCtrl.controller('indexCtrl', function($scope, $rootScope, $location, $ancho
 				$scope.location.path('/home');
 				break;
 			case 1:
-				$scope.location.path('/media');
+				$scope.location.path('/testimonials');
 				break;
 			case 2:
 				$scope.location.path('/repertoire');

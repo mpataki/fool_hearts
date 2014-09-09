@@ -13,6 +13,11 @@ a {
 	text-decoration: inherit;
 } 
 
+h2 {
+	margin-bottom: 0.2em;
+	color: #424C5E;
+}
+
 #mainContainer {
 	position: relative;
 	height: auto; !important
