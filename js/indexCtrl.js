@@ -18,8 +18,11 @@ indexCtrl.controller('indexCtrl', function($scope, $rootScope, $location, $ancho
 		case '/weddings':
 			$scope.navSelection = 4;
 			break;
-		case '/contact_quote':
+		case '/faq':
 			$scope.navSelection = 5;
+			break;
+		case '/contact_quote':
+			$scope.navSelection = 6;
 			break;
 		default:
 			$scope.navSelection = 0;
@@ -50,6 +53,9 @@ indexCtrl.controller('indexCtrl', function($scope, $rootScope, $location, $ancho
 				$scope.location.path('/weddings');
 				break;
 			case 5:
+				$scope.location.path('/faq');
+				break;
+			case 6:
 				$scope.location.path('/contact_quote');
 				break;
 			default:

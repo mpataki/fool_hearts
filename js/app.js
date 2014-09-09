@@ -7,6 +7,7 @@ var FoolHeartsApp = angular.module('FoolHeartsApp', [
   'repertoireCtrl',
   'membersCtrl',
   'weddingsCtrl',
+  'faqCtrl',
   'contactQuoteCtrl',
 ]);
 
@@ -32,6 +33,10 @@ FoolHeartsApp.config(['$routeProvider',
       when('/weddings', {
         templateUrl: 'partials/weddings.html',
         controller: 'weddingsCtrl'
+      }).
+      when('/faq', {
+        templateUrl: 'partials/faq.html',
+        controller: 'faqCtrl'
       }).
       when('/contact_quote', {
         templateUrl: 'partials/contact_quote.html',

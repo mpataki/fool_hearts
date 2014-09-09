@@ -23,6 +23,7 @@
 	<script type="text/javascript" src="js/repertoireCtrl.js"></script>
 	<script type="text/javascript" src="js/membersCtrl.js"></script>
 	<script type="text/javascript" src="js/weddingsCtrl.js"></script>
+	<script type="text/javascript" src="js/faqCtrl.js"></script>
 	<script type="text/javascript" src="js/contactQuoteCtrl.js"></script>
 
 	<!-- STYLE -->
@@ -69,8 +70,12 @@
 					<img src="images/dot.png" ng-show="navSelection == 4" width="7px" height="7px" class="selectionDot">
 				</div>
 				<div class="navItem">
-					<a ng-click="setNavSelection(5)" ng-bind="'Contact / Quote'"></a>
+					<a ng-click="setNavSelection(5)" ng-bind="'FAQ'"></a>
 					<img src="images/dot.png" ng-show="navSelection == 5" width="7px" height="7px" class="selectionDot" class="selectionDot">
+				</div>
+				<div class="navItem">
+					<a ng-click="setNavSelection(6)" ng-bind="'Contact / Quote'"></a>
+					<img src="images/dot.png" ng-show="navSelection == 6" width="7px" height="7px" class="selectionDot" class="selectionDot">
 				</div>
 			</div>
 		</div>
