@@ -259,6 +259,35 @@ h2 {
 	margin-bottom: 0.6em;
 }
 
+/**************** CONTACT / QUOTE ****************/
+
+.membersContainer {
+	margin-bottom: 1em;
+}
+
+.member {
+	padding: 0.5em;
+	display: inline-block;
+	width: 100%;
+}
+
+.memberPhoto {
+	padding: 5px;
+	background-color: #252525;
+	float: left;
+	width: 150px;
+	height: 150px;
+}
+
+.memberDesc {
+	float: left;
+	padding: 0.5em;
+}
+
+.memberName {
+	color: black;
+}
+
 /**************** TRANSITIONS ****************/
 
 .invisible {
