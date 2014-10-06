@@ -134,15 +134,39 @@ h2 {
 	margin-right: auto;
 }
 
+#socialLinksContainer {
+  text-align:center;
+}
+
+.center {
+  display:inline-block;
+  *display:inline;/* IE*/
+  *zoom:1;/* IE*/
+  overflow:hidden;
+  text-align:left;
+}
+
 #socialLinks {
 	display:table;
 	margin: 0 auto;
-	padding-top: 1em;
+	background-color: #252525;
+	color: #E2E1DF;
+	height: 25px;
+	text-align: center;
+	float: left;
 }
 
 .socialLink {
 	padding-left: 1em;
 	padding-right: 1em;
+	float: left;
+}
+
+#tabLeft {
+	float: left;
+}
+
+#tabRight {
 	float: left;
 }
 
