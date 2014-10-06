@@ -129,7 +129,6 @@ h2 {
 	font-family: 'Lato', sans-serif;
 	font-size: small;
 	text-align: center;
-	/*padding-bottom: 1em;*/
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -251,14 +250,22 @@ h2 {
 	margin-left: 0.6em;
 	margin-right: 0.6em;
 	margin-bottom: 0.6em;
+	border: 1px solid #252525;
 }
 
 .textInput {
-
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #848484;
+  outline: 0;
+  padding-left: 0.2em;
+	padding-right: 0.2em;
 }
 
 .submitButton {
-
+	width: 50%;
+	margin-top: 0.5em;
 }
 
 /**************** WEDDINGS ****************/
@@ -266,7 +273,8 @@ h2 {
 #weddingOpeningBlurb {
 	font-size: 110%;
 	padding-top: 1em;
-	padding-bottom: 2em;
+	padding-bottom: 1em;
+	text-align: center;
 }
 
 #checklist {
