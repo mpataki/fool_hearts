@@ -11,6 +11,7 @@ body {
 a { 
 	color: inherit; 
 	text-decoration: inherit;
+	cursor: pointer;
 } 
 
 h2 {
