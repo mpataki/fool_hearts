@@ -18,9 +18,10 @@ membersCtrl.controller("membersCtrl", function($scope) {
 		$scope.inTransition = true;
 		setTimeout(function(){
 			$scope.memberZoomed = memberToZoom;
+			memberToZoom = -1;
 			$scope.inTransition = false;
 			$scope.$apply();
-		}, 300);
+		}, 350);
 	}
 
 	$scope.$on('navigateAway', function(){

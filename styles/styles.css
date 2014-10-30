@@ -295,7 +295,7 @@ h2 {
 	margin-bottom: 0.6em;
 }
 
-/**************** CONTACT / QUOTE ****************/
+/**************** MEMBERS ****************/
 
 .membersContainer {
 	display: table;
@@ -307,7 +307,6 @@ h2 {
 	padding: 0.3em;
 	width: 150px;
 	height: 150px;
-	float: left;
 }
 
 .memberPhoto {
@@ -322,19 +321,81 @@ h2 {
 	-webkit-transition: all 0.5s ease; /* For Safari 3.1 to 6.0 */
 }
 
-.memberHover {
-  -webkit-transform: translate(-20px, -20px);
-  -moz-transform: translate(-20px, -20px);
-  -o-transform: translate(-20px, -20px);
-  transform: translate(-20px, -20px);
-  width: 190px;
-  height: 190px;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
+.memberZoomDown {
+  -webkit-transform: translate(-75px, 0px);
+  -moz-transform: translate(-75px, 0px);
+  -o-transform: translate(-75px, 0px);
+  transform: translate(-75px, 0px);
+  width: 300px;
+  height: 300px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+
+.memberZoomDownRight {
+	-webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  width: 300px;
+  height: 300px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+
+.memberZoomDownLeft {
+  -webkit-transform: translate(-150px, 0px);
+  -moz-transform: translate(-150px, 0px);
+  -o-transform: translate(-150px, 0px);
+  transform: translate(-150px, 0px);
+  width: 300px;
+  height: 300px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+
+.memberZoomUp {
+  -webkit-transform: translate(-75px, -150px);
+  -moz-transform: translate(-75px, -150px);
+  -o-transform: translate(-75px, -150px);
+  transform: translate(-75px, -150px);
+  width: 300px;
+  height: 300px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+
+.memberZoomUpRight {
+  -webkit-transform: translate(0px, -150px);
+  -moz-transform: translate(0px, -150px);
+  -o-transform: translate(0px, -150px);
+  transform: translate(0px, -150px);
+  width: 300px;
+  height: 300px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+
+.memberZoomUpLeft {
+  -webkit-transform: translate(-150px, -150px);
+  -moz-transform: translate(-150px, -150px);
+  -o-transform: translate(-150px, -150px);
+  transform: translate(-150px, -150px);
+  width: 300px;
+  height: 300px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
 }
 
 .memberDim {
-	opacity: 50%;
+	/*opacity: 0.8;
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;*/
 }
 
 /**************** TRANSITIONS ****************/
@@ -349,23 +410,6 @@ h2 {
 	transition: opacity 0.5s ease;
 	-webkit-transition: opacity 0.5s ease; /* For Safari 3.1 to 6.0 */
 	opacity: 1;
-}
-
-/* really would like to get these to work in safari... */
-.outLeft {
-	transition: transform 0.5s, opacity 0.5s ease;
-	-webkit-transition: transform 0.5s, opacity 0.5s ease; /* For Safari 3.1 to 6.0 */
-	transform: translateX(-300px);
-	-webkit-transform: translate(-300px, 0);
-	opacity: 0;
-}
-
-.outRight {
-	transition: transform 0.5s, opacity 0.5s ease;
-	-webkit-transition: transform 0.5s, opacity 0.5s ease; /* For Safari 3.1 to 6.0 */
-	transform: translateX(300px);
-	-webkit-transform: translate(300px, 0);
-	opacity: 0;
 }
 
 .in {
