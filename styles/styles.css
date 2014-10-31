@@ -305,17 +305,32 @@ h2 {
 
 .member {
 	padding: 0.3em;
-	width: 150px;
-	height: 150px;
+	width: 156px;
+	height: 156px;
+}
+
+.memberText {
+	color: #E2E1DF;
+	text-shadow:
+    -1px -1px 0 #252525,
+    1px -1px 0 #252525,
+    -1px 1px 0 #252525,
+    1px 1px 0 #252525;
+  position: absolute;
+  bottom: 0;
+}
+
+.memberName {
+  font-size: 140%;
 }
 
 .memberPhoto {
 	border:	0.3em solid #252525;
+	padding: 3px;
 	width: 150px;
 	height: 150px;
 	background-size: 100%;
 	background-repeat: no-repeat;
-  background-position: center;
   background-clip: border-box;
   position: relative;
   transition: all 0.5s ease;
@@ -402,11 +417,11 @@ h2 {
 
 .memberDim {
 	opacity: 0.8;
-  -webkit-filter: blur(3px);
-  -moz-filter: blur(3px);
-  -o-filter: blur(3px);
-  -ms-filter: blur(3px);
-  filter: blur(3px);
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
 }
