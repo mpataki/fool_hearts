@@ -5,21 +5,20 @@ membersCtrl.controller("membersCtrl", function($scope) {
 	$scope.membersInView = false;
 	
 	$scope.memberZoomed = -1; // signals no member hovered on
-	$scope.inTransition = false;
+	inTransition = false; // whether we are zooming out at the moment
 	memberToZoom = -1;	// used to zoom after another un-zooms. -1 for no one.
 	
 	$scope.enter = function(i) {
-		if ( !$scope.inTransition ) $scope.memberZoomed = i;
+		if ( !inTransition ) $scope.memberZoomed = i;
 		else memberToZoom = i;
 	}
 
 	$scope.leave = function() {
 		$scope.memberZoomed = -1;
-		$scope.inTransition = true;
+		inTransition = true;
 		setTimeout(function(){
 			$scope.memberZoomed = memberToZoom;
-			memberToZoom = -1;
-			$scope.inTransition = false;
+			inTransition = false;
 			$scope.$apply();
 		}, 350);
 	}
