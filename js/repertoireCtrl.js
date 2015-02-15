@@ -35,9 +35,9 @@ repertoireCtrl.controller('repertoireCtrl', function($scope) {
 	$scope.response = '';
 	$scope.requestResponse = function(){
 		if ( $scope.request.title || $scope.request.artist )
-			$scope.response = 'Your request has been received. Thanks!'
+			$scope.response = 'Your request has been received. Thanks!';
 		else
-			$scope.response = 'Oops, enter a song above and try again.'
+			$scope.response = 'Oops, enter a song above and try again.';
 	}
 
 	$scope.$on('navigateAway', function(){
