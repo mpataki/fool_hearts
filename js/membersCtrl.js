@@ -16,8 +16,9 @@ membersCtrl.controller("membersCtrl", function($scope) {
 	$scope.leave = function() {
 		$scope.memberZoomed = -1;
 		inTransition = true;
-		setTimeout(function(){
+		setTimeout( function() {
 			$scope.memberZoomed = memberToZoom;
+			memberToZoom = -1;
 			inTransition = false;
 			$scope.$apply();
 		}, 350);

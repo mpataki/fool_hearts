@@ -197,6 +197,13 @@ h2 {
   height: 100%;
   width: 100%;
 }
+/**************** TESTIMONIALS ****************/
+
+.testimonialName {
+	color: #424C5E;
+	font-size: 75%;
+	padding-left: 2em;
+}
 
 /**************** REPERTOIRE ****************/
 
