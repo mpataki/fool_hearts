@@ -80,7 +80,7 @@ indexCtrl.controller('indexCtrl', function($scope, $rootScope, $location, $ancho
 				window.open("https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.foolhearts.com", "", "width=240, height=22");
 				break;
 			case 'pin':
-				window.open("https://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.foolhearts.com&media=media+link+here&description=", "", "width=830, height=345");
+				window.open("https://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.foolhearts.com&media=http%3A//matpataki.com/dev/foolhearts/images/fh_pintrest_image.jpg&description=", "", "width=830, height=345");
 				break;
 			case 'g+':
 				window.open("https://plus.google.com/share?url=http%3A%2F%2Fwww.foolhearts.com", "", "width=500, height=426");
