@@ -1,18 +1,18 @@
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
 body {
-	background-color: #647590;	
+	background-color: #647590;
 	margin: 0px;
 	height: auto;
 	min-height: 100%;
 	height: 100%;
 }
 
-a { 
-	color: inherit; 
+a {
+	color: inherit;
 	text-decoration: inherit;
 	cursor: pointer;
-} 
+}
 
 h2 {
 	margin-bottom: 0.2em;
@@ -49,7 +49,7 @@ h2 {
 }
 
 .headerTitle {
-	display:table; 
+	display:table;
 	margin: auto auto;
 	position: relative;
   top: 40%;
@@ -57,14 +57,14 @@ h2 {
   -webkit-transform: translate(0, -50%);
 }
 
-.hline { 
-	height: 2px; 
+.hline {
+	height: 2px;
 	background: #E2E1DF;
 	border:	1px solid #252525;
 }
 
-.hline2 { 
-	height: 1px; 
+.hline2 {
+	height: 1px;
 	background-color: #252525;
 }
 
@@ -140,11 +140,13 @@ h2 {
 }
 
 .center {
-  display:inline-block;
-  *display:inline;/* IE*/
-  *zoom:1;/* IE*/
-  overflow:hidden;
-  text-align:left;
+  display: inline-block;
+  *display: inline;/* IE*/
+  *zoom: 1;/* IE*/
+  overflow: visible;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #socialLinks {
@@ -320,6 +322,7 @@ h2 {
 	padding: 0.3em;
 	width: 156px;
 	height: 156px;
+  float: left;
 }
 
 .memberText {
@@ -331,10 +334,11 @@ h2 {
     1px 1px 0 #252525;
   position: absolute;
   bottom: 0;
+  text-align: left;
 }
 
 .memberName {
-  font-size: 150%;
+  font-size: 120%;
 }
 
 .memberPhoto {
@@ -349,13 +353,30 @@ h2 {
   position: relative;
   transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease; /* For Safari 3.1 to 6.0 */
+  overflow: visible
+}
+
+tr:last-child td:first-child {
+  width: 33%;
+}
+
+tr:nth-child(2) {
+  width: 33%;
+}
+
+tr:last-child td:last-child {
+  width: 33%;
 }
 
 .memberZoomDown {
-  -webkit-transform: translate(0, 25%) scale(1.5);
-  -moz-transform: translate(0, 25%) scale(1.5);
-  -o-transform: translate(0, 25%) scale(1.5);
-  transform: translate(0, 25%) scale(1.5);
+  -webkit-transform: scale(1.5);
+  -webkit-transform-origin: top;
+  -moz-transform: scale(1.5);
+  -moz-transform-origin: top;
+  -o-transform: scale(1.5);
+  -o-transform-origin: top;
+  transform: scale(1.5);
+  transform-origin: top;
   position: relative;
   z-index: 2;
   transition: all 0.5s ease;
@@ -363,10 +384,14 @@ h2 {
 }
 
 .memberZoomDownRight {
-	-webkit-transform: translate(25%, 25%) scale(1.5);
-  -moz-transform: translate(25%, 25%) scale(1.5);
-  -o-transform: translate(25%, 25%) scale(1.5);
-  transform: translate(25%, 25%) scale(1.5);
+	-webkit-transform: scale(1.5);
+  -webkit-transform-origin: top left;
+  -moz-transform: scale(1.5);
+  -moz-transform-origin: top left;
+  -o-transform: scale(1.5);
+  -o-transform-origin: top left;
+  transform: scale(1.5);
+  transform-origin: top left;
   position: relative;
   z-index: 2;
   transition: all 0.5s ease;
@@ -374,10 +399,14 @@ h2 {
 }
 
 .memberZoomDownLeft {
-  -webkit-transform: translate(-25%, 25%) scale(1.5);
-  -moz-transform: translate(-25%, 25%) scale(1.5);
-  -o-transform: translate(-25%, 25%) scale(1.5);
-  transform: translate(-25%, 25%) scale(1.5);
+  -webkit-transform: scale(1.5);
+  -webkit-transform-origin: top right;
+  -moz-transform: scale(1.5);
+  -moz-transform-origin: top right;
+  -o-transform: scale(1.5);
+  -o-transform-origin: top right;
+  transform: scale(1.5);
+  transform-origin: top right;
   position: relative;
   z-index: 2;
   transition: all 0.5s ease;
@@ -385,10 +414,14 @@ h2 {
 }
 
 .memberZoomUp {
-  -webkit-transform: translate(0, -25%) scale(1.5);
-  -moz-transform: translate(0, -25%) scale(1.5);
-  -o-transform: translate(0, -25%) scale(1.5);
-  transform: translate(0, -25%) scale(1.5);
+  -webkit-transform: scale(1.5);
+  -webkit-transform-origin: bottom;
+  -moz-transform: scale(1.5);
+  -moz-transform-origin: bottom;
+  -o-transform: scale(1.5);
+  -o-transform-origin: bottom;
+  transform: scale(1.5);
+  transform-origin: bottom;
   position: relative;
   z-index: 2;
   transition: all 0.5s ease;
@@ -396,10 +429,14 @@ h2 {
 }
 
 .memberZoomUpRight {
-  -webkit-transform: translate(25%, -25%) scale(1.5);
-  -moz-transform: translate(25%, -25%) scale(1.5);
-  -o-transform: translate(25%, -25%) scale(1.5);
-  transform: translate(25%, -25%) scale(1.5);
+  -webkit-transform: scale(1.5);
+  -webkit-transform-origin: bottom left;
+  -moz-transform: scale(1.5);
+  -moz-transform-origin: bottom left;
+  -o-transform: scale(1.5);
+  -o-transform-origin: bottom left;
+  transform: scale(1.5);
+  transform-origin: bottom left;
   position: relative;
   z-index: 2;
   transition: all 0.5s ease;
@@ -407,10 +444,14 @@ h2 {
 }
 
 .memberZoomUpLeft {
-  -webkit-transform: translate(-25%, -25%) scale(1.5);
-  -moz-transform: translate(-25%, -25%) scale(1.5);
-  -o-transform: translate(-25%, -25%) scale(1.5);
-  transform: translate(-25%, -25%) scale(1.5);
+  -webkit-transform: scale(1.5);
+  -webkit-transform-origin: bottom right;
+  -moz-transform: scale(1.5);
+  -moz-transform-origin: bottom right;
+  -o-transform: scale(1.5);
+  -o-transform-origin: bottom right;
+  transform: scale(1.5);
+  transform-origin: bottom right;
   position: relative;
   z-index: 2;
   transition: all 0.5s ease;

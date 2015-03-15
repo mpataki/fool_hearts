@@ -1,109 +1,70 @@
 <div class="membersContainer center invisible" ng-class="{visible: membersInView}" in-view="membersInView = true;">
 
-<table>
-	<tr>
-		<td>
-			<div class="member">
-				<div style="background-image: url(images/phil.jpg);" class="memberPhoto" ng-class="{ memberZoomDownRight: memberZoomed == 0, memberDim: (memberZoomed != 0 && memberZoomed != -1)}" ng-mouseenter="enter(0)" ng-mouseleave="leave(0)">
-					<div class="memberText invisible" ng-class="{visible: memberZoomed == 0}">
-						<div class="memberName">Phil Laffin</div>
-						Vocals, Guitar, Bass
+	<div class=center>
+		<div class="member">
+			<div style="background-image: url(images/phil.jpg);" class="memberPhoto" ng-class="{ memberZoomDownRight: memberZoomed == 0, memberDim: (memberZoomed != 0 && memberZoomed != -1)}" ng-mouseenter="enter(0)" ng-mouseleave="leave(0)">
+				<div class="memberText invisible" ng-class="{visible: memberZoomed == 0}">
+					<div class="memberName">Phil Laffin</div>
+					Vocals, Guitar, Bass
+				</div>
+			</div>
+		</div>
+
+		<div class="member">
+			<div style="background-image: url(images/eric.jpg);" class="memberPhoto" ng-class="{ memberZoomDown: memberZoomed == 2, memberDim: (memberZoomed != 2 && memberZoomed != -1)}" ng-mouseenter="enter(2)" ng-mouseleave="leave(2)">
+					<div class="invisible memberText" ng-class="{visible: memberZoomed == 2}">
+						<div class="memberName">Eric Walker</div>
+						Guitar, Vocals, Bass
 					</div>
-				</div>
-		</td>
-		<td>
-			<div class="member">
-				<div style="background-image: url(images/lindsey.jpg);" class="memberPhoto" ng-class="{ memberZoomDown: memberZoomed == 1, memberDim: (memberZoomed != 1 && memberZoomed != -1)}" ng-mouseenter="enter(1)" ng-mouseleave="leave(1)">
-						<div class="invisible memberText" ng-class="{visible: memberZoomed == 1}">
-							<div class="memberName">Lindsey Hull</div>
-							Vocals
-						</div>
-				</div>
-			</div>		
-		</td>
-		<td>
-			<div class="member">
-				<div style="background-image: url(images/eric.jpg);" class="memberPhoto" ng-class="{ memberZoomDown: memberZoomed == 2, memberDim: (memberZoomed != 2 && memberZoomed != -1)}" ng-mouseenter="enter(2)" ng-mouseleave="leave(2)">
-						<div class="invisible memberText" ng-class="{visible: memberZoomed == 2}">
-							<div class="memberName">Eric Walker</div>
-							Guitar, Vocals, Bass
-						</div>
-				</div>
 			</div>
-		</td>
-		<td>
-			<div class="member">
-				<div style="background-image: url(images/lance.jpg);" class="memberPhoto" ng-class="{ memberZoomDown: memberZoomed == 3, memberDim: (memberZoomed != 3 && memberZoomed != -1)}" ng-mouseenter="enter(3)" ng-mouseleave="leave(3)">
-						<div class="invisible memberText" ng-class="{visible: memberZoomed == 3}">
-							<div class="memberName">Lance Schibler</div>
-							Guitar, Bass, Vocals
-						</div>
-				</div>
+		</div>
+
+		<div class="member">
+			<div style="background-image: url(images/mike.jpg);" class="memberPhoto" ng-class="{ memberZoomDown: memberZoomed == 5, memberDim: (memberZoomed != 5 && memberZoomed != -1)}" ng-mouseenter="enter(5)" ng-mouseleave="leave(5)">
+					<div class="invisible memberText" ng-class="{visible: memberZoomed == 5}">
+						<div class="memberName">Mike Butlin</div>
+						Keyboards, Vocals
+					</div>
 			</div>
-		</td>
-		<td>
-			<div class="member">
-				<div style="background-image: url(images/mat.jpg);" class="memberPhoto" ng-class="{ memberZoomDownLeft: memberZoomed == 4, memberDim: (memberZoomed != 4 && memberZoomed != -1)}" ng-mouseenter="enter(4)" ng-mouseleave="leave(4)">
-						<div class="invisible memberText" ng-class="{visible: memberZoomed == 4}">
-							<div class="memberName">Mat Pataki</div>
-							Drums, Percussion, Vocals
-						</div>
-				</div>
-			</div>			
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<div class="member">
-				<div style="background-image: url(images/mike.jpg);" class="memberPhoto" ng-class="{ memberZoomUpRight: memberZoomed == 5, memberDim: (memberZoomed != 5 && memberZoomed != -1)}" ng-mouseenter="enter(5)" ng-mouseleave="leave(5)">
-						<div class="invisible memberText" ng-class="{visible: memberZoomed == 5}">
-							<div class="memberName">Mike Butlin</div>
-							Keyboards, Vocals
-						</div>
-				</div>
+		</div>
+
+		<div class="member">
+			<div style="background-image: url(images/mat.jpg);" class="memberPhoto" ng-class="{ memberZoomDownLeft: memberZoomed == 4, memberDim: (memberZoomed != 4 && memberZoomed != -1)}" ng-mouseenter="enter(4)" ng-mouseleave="leave(4)">
+					<div class="invisible memberText" ng-class="{visible: memberZoomed == 4}">
+						<div class="memberName">Mat Pataki</div>
+						Drums, Vocals
+					</div>
 			</div>
-		</td>
-		<td>
-			<div class="member">
-				<div style="background-image: url(images/cayley.jpg);" class="memberPhoto" ng-class="{ memberZoomUp: memberZoomed == 6, memberDim: (memberZoomed != 6 && memberZoomed != -1)}" ng-mouseenter="enter(6)" ng-mouseleave="leave(6)">
-						<div class="invisible memberText" ng-class="{visible: memberZoomed == 6}">
-							<div class="memberName">Cayley Burgess</div>
-							Saxophone
-						</div>
-				</div>
+		</div>
+	</div>
+
+	<div class="center">
+		<div class="member">
+			<div style="background-image: url(images/lindsey.jpg);" class="memberPhoto" ng-class="{ memberZoomUp: memberZoomed == 1, memberDim: (memberZoomed != 1 && memberZoomed != -1)}" ng-mouseenter="enter(1)" ng-mouseleave="leave(1)">
+					<div class="invisible memberText" ng-class="{visible: memberZoomed == 1}">
+						<div class="memberName">Lindsey Hull</div>
+						Vocals
+					</div>
 			</div>
-		</td>
-		<td>
-			<div class="member">
-				<div style="background-image: url(images/dan.jpg);" class="memberPhoto" ng-class="{ memberZoomUp: memberZoomed == 7, memberDim: (memberZoomed != 7 && memberZoomed != -1)}" ng-mouseenter="enter(7)" ng-mouseleave="leave(7)">
-						<div class="invisible memberText" ng-class="{visible: memberZoomed == 7}">
-							<div class="memberName">Dan Gooch</div>
-							Trumpet
-						</div>
-				</div>
+		</div>
+
+		<div class="member">
+			<div style="background-image: url(images/cayley.jpg);" class="memberPhoto" ng-class="{ memberZoomUp: memberZoomed == 6, memberDim: (memberZoomed != 6 && memberZoomed != -1)}" ng-mouseenter="enter(6)" ng-mouseleave="leave(6)">
+					<div class="invisible memberText" ng-class="{visible: memberZoomed == 6}">
+						<div class="memberName">Cayley Burgess</div>
+						Saxophone
+					</div>
 			</div>
-		</td>
-		<td>
-			<div class="member">
-				<div style="background-image: url(images/pat.jpg);" class="memberPhoto" ng-class="{ memberZoomUp: memberZoomed == 8, memberDim: (memberZoomed != 8 && memberZoomed != -1)}" ng-mouseenter="enter(8)" ng-mouseleave="leave(8)">
-						<div class="invisible memberText" ng-class="{visible: memberZoomed == 8}">
-							<div class="memberName">Pat Maloney</div>
-							Drums, Percussion, Vocals
-						</div>
-				</div>
+		</div>
+
+		<div class="member">
+			<div style="background-image: url(images/dan.jpg);" class="memberPhoto" ng-class="{ memberZoomUp: memberZoomed == 7, memberDim: (memberZoomed != 7 && memberZoomed != -1)}" ng-mouseenter="enter(7)" ng-mouseleave="leave(7)">
+					<div class="invisible memberText" ng-class="{visible: memberZoomed == 7}">
+						<div class="memberName">Dan Gooch</div>
+						Trumpet
+					</div>
 			</div>
-			</td>
-		<td>
-			<div class="member">
-				<div style="background-image: url(images/msob.jpg);" class="memberPhoto" ng-class="{ memberZoomUpLeft: memberZoomed == 9, memberDim: (memberZoomed != 9 && memberZoomed != -1)}" ng-mouseenter="enter(9)" ng-mouseleave="leave(9)">
-						<div class="invisible memberText" ng-class="{visible: memberZoomed == 9}">
-							<div class="memberName">Mike Smith</div>
-							Upright & Electric Bass
-						</div>
-				</div>
-			</div>
-		</td>
-	</tr>
-</table>
+		</div>
+	</div>
 
 </div>
