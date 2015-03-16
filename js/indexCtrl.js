@@ -61,7 +61,7 @@ indexCtrl.controller('indexCtrl', function($scope, $rootScope, $location, $ancho
 			default:
 				$scope.location.path('/home');
 		}
-		
+
 		if ( $scope.location.hash() != 'content' ) {
 			$scope.location.hash('content');
 			$scope.anchorScroll();

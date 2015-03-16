@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="google-site-verification" content="0v2gq0IbJA2ONNgJRL7Sd0oVk2a1siHzQfF5qqt8xaM" />
+
 	<!-- ANGULAR -->
 	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
 	<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
@@ -48,7 +50,7 @@
 
 		<!-- NAVIGATION BAR -->
 		<div id="navBar">
-			<div style="display:table;margin: 0 auto;"> <!-- div to align navItems horizontally -->	
+			<div style="display:table;margin: 0 auto;"> <!-- div to align navItems horizontally -->
 				<div class="navItem">
 					<a ng-click="setNavSelection(0)" ng-bind="'Home'"></a>
 					<img src="images/dot.png" ng-show="navSelection == 0" width="7px" height="7px" class="selectionDot">
@@ -74,7 +76,7 @@
 					<img src="images/dot.png" ng-show="navSelection == 5" width="7px" height="7px" class="selectionDot" class="selectionDot">
 				</div>
 				<div class="navItem">
-					<a ng-click="setNavSelection(6)" ng-bind="'Contact / Quote'"></a>
+					<a ng-click="setNavSelection(6)" ng-bind="'Contact'"></a>
 					<img src="images/dot.png" ng-show="navSelection == 6" width="7px" height="7px" class="selectionDot" class="selectionDot">
 				</div>
 			</div>
@@ -89,11 +91,11 @@
 				<div class="center">
 					<div id="tabLeft"><img src="images/tabLeft.png" height="20px"></div>
 					<div id="socialLinks">
-						
+
 						<div class="socialLink">
 							<a><img src="images/twitterLogoSmall.png" height="17px" ng-click="showSocialLink('twitter')"></a>
 						</div>
-						
+
 						<div class="socialLink">
 							<a><img src="images/facebookLogoSmall.png" height="17px" ng-click="showSocialLink('fb_post')"></a>
 						</div>
@@ -105,20 +107,20 @@
 						<div class="socialLink">
 							<a><img src="images/pintrestLogoSmall.png" height="17px" ng-click="showSocialLink('pin')"></a>
 						</div>
-						
+
 						<div class="socialLink">
 							<a><img src="images/googlePlusLogoSmall.png" height="17px" ng-click="showSocialLink('g+')"></a>
 						</div>
-					
+
 					</div>
-					
+
 					<div id="tabRight"><img src="images/tabRight.png" height="20px"></div>
 				</div>
-			
+
 			</div>
 
 			<div ng-view class="basicContent"></div>
-			
+
 			<div id="footerBarrier"></div>
 			<div id="footer">
 				<div class="hline2"></div>
