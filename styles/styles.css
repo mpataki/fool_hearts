@@ -30,14 +30,14 @@ h2 {
 	text-align: center;
 	font-family: 'Roboto Condensed', sans-serif;
 	color: #E2E1DF;
-	font-size: 900%;
+	font-size: 800%;
 	text-shadow:
     -1px -1px 0 #252525,
     1px -1px 0 #252525,
     -1px 1px 0 #252525,
     1px 1px 0 #252525;
 	padding: .2em 0em 0.2em 0em;
-	height: 80vh;
+	height: 60vh;
 }
 
 #headerBackground {
@@ -46,6 +46,7 @@ h2 {
   top: 0px;
 	z-index: -1;
 	width: 100%;
+  min-height: 600px;
 }
 
 .headerTitle {
@@ -319,7 +320,10 @@ h2 {
 }
 
 .member {
-	padding: 0.3em;
+	padding-top: 0.3em;
+  padding-bottom: 0;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
 	width: 156px;
 	height: 156px;
   float: left;
@@ -343,7 +347,6 @@ h2 {
 
 .memberPhoto {
 	border:	0.3em solid #252525;
-	padding: 3px;
 	width: 150px;
 	height: 150px;
 	background-color: #252525;
