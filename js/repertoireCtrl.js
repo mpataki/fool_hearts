@@ -14,7 +14,7 @@ repertoireCtrl.controller('repertoireCtrl', function($scope) {
 	$scope.showRequestResponse = false;
 	$scope.sortCol = 1;
 
-	var query = new google.visualization.Query("https://docs.google.com/spreadsheets/d/1rgrudzRAit8VWOAAqMPlkK7SE2Yqee7nrXTRfnxZoNI/edit?usp=sharing");
+	var query = new google.visualization.Query("https://docs.google.com/spreadsheets/d/1_pV6hj090t0agtIv0wfCe_Kc5yJxo9eKkPWr_aODmKA/edit?usp=sharing");
 	query.setQuery('select A,B,C');
 	query.send(handleQueryResponse);
 
