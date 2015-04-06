@@ -1,4 +1,4 @@
-google.load('visualization', '1', {packages:['corechart']});
+google.load('visualization', '1', { packages: ['corechart'] });
 google.setOnLoadCallback(function() {
   console.log("Finished loading google visualization.");
 });
@@ -31,7 +31,7 @@ repertoireCtrl.controller('repertoireCtrl', function($scope) {
 		$scope.sortCol = sort;
 	}
 
-	$scope.request = {title: '', name: ''};
+	$scope.request = { title: '', name: '' };
 	$scope.response = '';
 	$scope.requestResponse = function(){
 		if ( $scope.request.title || $scope.request.artist )
