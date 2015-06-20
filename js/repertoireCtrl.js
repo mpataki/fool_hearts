@@ -7,6 +7,10 @@ var repertoireCtrl = angular.module('repertoireCtrl', []);
 
 repertoireCtrl.controller('repertoireCtrl', function($scope) {
 
+	SONG_TITLE = 0
+	ARTIST = 1
+	RELEASED = 2
+
 	$scope.requestInView = false;
 	$scope.repBlurbInView = false;
 	$scope.repTableInView = false;
@@ -19,15 +23,53 @@ repertoireCtrl.controller('repertoireCtrl', function($scope) {
 	query.send(handleQueryResponse);
 
 	function handleQueryResponse(data) {
-		$scope.data = data.getDataTable();
-		$scope.dataView = new google.visualization.DataView($scope.data);
-		$scope.sortBy(1);
+		$scope.rep = data.q.Lf.map(function(e){
+			return { title: e.c[0].v, artist: e.c[1].v, released: e.c[2].v };
+		})
+		$scope.sortBy(ARTIST);
 		$scope.repTableLoaded = true;
 		$scope.$apply();
 	}
 
+	removeThe = function(str){
+		return str.replace(/^(The |the )/, "")
+	}
+
 	$scope.sortBy = function(sort){
-		$scope.sortedData = $scope.dataView.getSortedRows(sort);
+		sortFunction = null;
+		$scope.rep.forEach(function(e, i) { e.i = i; })
+
+		switch(sort) {
+			case SONG_TITLE:
+				sortFunction = function(a, b) {
+					aWithoutThe = removeThe(a.title);
+					bWithoutThe = removeThe(b.title);
+
+					if (aWithoutThe == bWithoutThe)
+						return (a.i < b.i) ? -1 : 1; // stage sort
+
+					return aWithoutThe < bWithoutThe ? -1 : 1;
+				}
+				break;
+			case ARTIST:
+				sortFunction = function(a, b) {
+					aWithoutThe = removeThe(a.artist);
+					bWithoutThe = removeThe(b.artist);
+
+					if (aWithoutThe == bWithoutThe)
+						return (a.i < b.i) ? -1 : 1; // stage sort
+
+					return aWithoutThe < bWithoutThe ? -1 : 1;
+				}
+				break;
+			case RELEASED:
+				sortFunction = function(a, b) {
+					return a.released - b.released;
+				}
+				break;
+		}
+
+		$scope.rep = $scope.rep.sort(sortFunction)
 		$scope.sortCol = sort;
 	}
 

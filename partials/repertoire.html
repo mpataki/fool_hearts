@@ -56,10 +56,10 @@ As our repertoire is <i>constantly evolving</i>, this list is not exhaustive but
 				</table>
 			</td>
 		</tr>
-		<tr ng-repeat="i in sortedData">
-			<td class="repTableEntry" ng-bind="dataView.getFormattedValue(i, 0)"></td>
-			<td class="repTableEntry" ng-bind="dataView.getFormattedValue(i, 1)"></td>
-			<td class="repTableEntry" ng-bind="dataView.getFormattedValue(i, 2)"></td>
+		<tr ng-repeat="i in rep">
+			<td class="repTableEntry" ng-bind="i.title"></td>
+			<td class="repTableEntry" ng-bind="i.artist"></td>
+			<td class="repTableEntry" ng-bind="i.released"></td>
 		</tr>
 	</table>
 </div>
