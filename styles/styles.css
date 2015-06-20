@@ -136,8 +136,9 @@ h2 {
 }
 
 #socialLinksContainer {
-  text-align:center;
+  text-align: center;
   font-size: small;
+  cursor: pointer;
 }
 
 .center {

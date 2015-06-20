@@ -73,8 +73,8 @@ indexCtrl.controller('indexCtrl', function($scope, $rootScope, $location, $ancho
 			case 'twitter':
 				window.open("https://twitter.com/intent/tweet?hashtags=foolhearts&original_referer=http%3A%2F%2Flocalhost%3A8888%2F&text=Fool%20Hearts&tw_p=tweetbutton&url=http%3A%2F%2Fwww.foolhearts.com", "", "width=580, height=438");
 				break;
-			case 'fb_post':
-				window.open("http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.foolhearts.com&title=Fool+Hearts", "", "width=580, height=229");
+			case 'fb_page':
+				window.open("https://www.facebook.com/foolhearts");
 				break;
 			case 'fb_like':
 				window.open("https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.foolhearts.com", "", "width=240, height=22");
