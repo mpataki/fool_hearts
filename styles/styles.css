@@ -201,6 +201,14 @@ h2 {
   height: 100%;
   width: 100%;
 }
+
+.poster {
+  display: table;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 1.5em;
+}
+
 /**************** TESTIMONIALS ****************/
 
 .testimonialName {
