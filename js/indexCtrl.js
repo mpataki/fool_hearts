@@ -2,31 +2,9 @@ var indexCtrl = angular.module('indexCtrl', ['ngRoute', 'duParallax']);
 
 indexCtrl.controller('indexCtrl', function($scope, $rootScope, $location, $anchorScroll, parallaxHelper) {
 
-	switch($location.$$path){
-		case '/home':
-			$scope.navSelection = 0;
-			break;
-		case '/testimonials':
-			$scope.navSelection = 1;
-			break;
-		case '/repertoire':
-			$scope.navSelection = 2;
-			break;
-		case '/members':
-			$scope.navSelection = 3;
-			break;
-		case '/weddings':
-			$scope.navSelection = 4;
-			break;
-		case '/faq':
-			$scope.navSelection = 5;
-			break;
-		case '/contact_quote':
-			$scope.navSelection = 6;
-			break;
-		default:
-			$scope.navSelection = 0;
-	}
+  $scope.paths = ['/home', '/reel', '/testimonials', '/repertoire', '/members', '/weddings', '/faq', '/contact_quote']
+  $scope.navSelection = $scope.paths.indexOf($location.$$path);
+  if ($scope.navSelection < 0) $scope.navSelection = 0;
 
 	$scope.background = parallaxHelper.createAnimator(-0.75);
 	$scope.title = parallaxHelper.createAnimator(-0.3);
@@ -36,31 +14,7 @@ indexCtrl.controller('indexCtrl', function($scope, $rootScope, $location, $ancho
 	$scope.anchorScroll = $anchorScroll;
 
 	var navigate = function(selection){
-		switch(selection){
-			case 0:
-				$scope.location.path('/home');
-				break;
-			case 1:
-				$scope.location.path('/testimonials');
-				break;
-			case 2:
-				$scope.location.path('/repertoire');
-				break;
-			case 3:
-				$scope.location.path('/members');
-				break;
-			case 4:
-				$scope.location.path('/weddings');
-				break;
-			case 5:
-				$scope.location.path('/faq');
-				break;
-			case 6:
-				$scope.location.path('/contact_quote');
-				break;
-			default:
-				$scope.location.path('/home');
-		}
+    $scope.location.path($scope.paths[selection]);
 
 		if ( $scope.location.hash() != 'content' ) {
 			$scope.location.hash('content');

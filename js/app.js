@@ -18,6 +18,10 @@ FoolHeartsApp.config(['$routeProvider',
         templateUrl: 'partials/home.html',
         controller: 'homeCtrl'
       }).
+      when('/reel', {
+        templateUrl: 'partials/reel.html',
+        controller: 'reelCtrl'
+      }).
       when('/testimonials', {
         templateUrl: 'partials/testimonials.html',
         controller: 'testimonialsCtrl'

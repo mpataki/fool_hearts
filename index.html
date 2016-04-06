@@ -21,6 +21,7 @@
 	<script type="text/javascript" src="js/app.js"></script>
 	<script type="text/javascript" src="js/indexCtrl.js"></script>
 	<script type="text/javascript" src="js/homeCtrl.js"></script>
+  <script type="text/javascript" src="js/reelCtrl.js"></script>
 	<script type="text/javascript" src="js/testimonialsCtrl.js"></script>
 	<script type="text/javascript" src="js/repertoireCtrl.js"></script>
 	<script type="text/javascript" src="js/membersCtrl.js"></script>
@@ -52,32 +53,36 @@
 		<div id="navBar">
 			<div style="display:table;margin: 0 auto;"> <!-- div to align navItems horizontally -->
 				<div class="navItem">
-					<a ng-click="setNavSelection(0)" ng-bind="'Home'"></a>
-					<img src="images/dot.png" ng-show="navSelection == 0" width="7px" height="7px" class="selectionDot">
+					<a ng-click="setNavSelection(paths.indexOf('/home'))" ng-bind="'Home'"></a>
+					<img src="images/dot.png" ng-show="navSelection == paths.indexOf('/home')" width="7px" height="7px" class="selectionDot">
+				</div>
+        <div class="navItem">
+					<a ng-click="setNavSelection(paths.indexOf('/reel'))" ng-bind="'Reel'"></a>
+					<img src="images/dot.png" ng-show="navSelection == paths.indexOf('/reel')" width="7px" height="7px" class="selectionDot">
 				</div>
 				<div class="navItem">
-					<a ng-click="setNavSelection(1)" ng-bind="'Testimonials'"></a>
-					<img src="images/dot.png" ng-show="navSelection == 1" width="7px" height="7px" class="selectionDot">
+					<a ng-click="setNavSelection(paths.indexOf('/testimonials'))" ng-bind="'Testimonials'"></a>
+					<img src="images/dot.png" ng-show="navSelection == paths.indexOf('/testimonials')" width="7px" height="7px" class="selectionDot">
 				</div>
 				<div class="navItem">
-					<a ng-click="setNavSelection(2)" ng-bind="'Repertoire'"></a>
-					<img src="images/dot.png" ng-show="navSelection == 2" width="7px" height="7px" class="selectionDot">
+					<a ng-click="setNavSelection(paths.indexOf('/repertoire'))" ng-bind="'Repertoire'"></a>
+					<img src="images/dot.png" ng-show="navSelection == paths.indexOf('/repertoire')" width="7px" height="7px" class="selectionDot">
 				</div>
 				<div class="navItem">
-					<a ng-click="setNavSelection(3)" ng-bind="'Members'"></a>
-					<img src="images/dot.png" ng-show="navSelection == 3" width="7px" height="7px" class="selectionDot">
+					<a ng-click="setNavSelection(paths.indexOf('/members'))" ng-bind="'Members'"></a>
+					<img src="images/dot.png" ng-show="navSelection == paths.indexOf('/members')" width="7px" height="7px" class="selectionDot">
 				</div>
 				<div class="navItem">
-					<a ng-click="setNavSelection(4)" ng-bind="'Weddings'"></a>
-					<img src="images/dot.png" ng-show="navSelection == 4" width="7px" height="7px" class="selectionDot">
+					<a ng-click="setNavSelection(paths.indexOf('/weddings'))" ng-bind="'Weddings'"></a>
+					<img src="images/dot.png" ng-show="navSelection == paths.indexOf('/weddings')" width="7px" height="7px" class="selectionDot">
 				</div>
 				<div class="navItem">
-					<a ng-click="setNavSelection(5)" ng-bind="'FAQ'"></a>
-					<img src="images/dot.png" ng-show="navSelection == 5" width="7px" height="7px" class="selectionDot" class="selectionDot">
+					<a ng-click="setNavSelection(paths.indexOf('/faq'))" ng-bind="'FAQ'"></a>
+					<img src="images/dot.png" ng-show="navSelection == paths.indexOf('/faq')" width="7px" height="7px" class="selectionDot" class="selectionDot">
 				</div>
 				<div class="navItem">
-					<a ng-click="setNavSelection(6)" ng-bind="'Contact'"></a>
-					<img src="images/dot.png" ng-show="navSelection == 6" width="7px" height="7px" class="selectionDot" class="selectionDot">
+					<a ng-click="setNavSelection(paths.indexOf('/contact_quote'))" ng-bind="'Contact'"></a>
+					<img src="images/dot.png" ng-show="navSelection == paths.indexOf('/contact_quote')" width="7px" height="7px" class="selectionDot" class="selectionDot">
 				</div>
 			</div>
 		</div>
