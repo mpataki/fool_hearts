@@ -517,5 +517,6 @@ tr:last-child td:last-child {
 	padding: 0.5em;
 	margin: 0.6em;
   margin-top: 0;
+  margin-bottom: 1em;
 	background-color: #9FD7C4;
 }
