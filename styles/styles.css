@@ -511,8 +511,8 @@ tr:last-child td:last-child {
 	opacity: 1;
 }
 
-/********************* REEL *********************/
-.reel__videoContainer {
+/********************* VIDEOS *********************/
+.videos__videoContainer {
 	display: inline-block;
 	padding: 0.5em;
 	margin: 0.6em;

@@ -4,7 +4,7 @@ indexCtrl.controller('indexCtrl', function($scope, $rootScope, $location, $ancho
 
   $scope.paths = [
     '/home',
-    '/reel',
+    '/videos',
     '/testimonials',
     '/repertoire',
     '/members',
