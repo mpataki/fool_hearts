@@ -3,11 +3,11 @@ var membersCtrl = angular.module('membersCtrl', []);
 membersCtrl.controller("membersCtrl", function($scope) {
 
 	$scope.membersInView = false;
-	
+
 	$scope.memberZoomed = -1; // signals no member hovered on
 	inTransition = false; // whether we are zooming out at the moment
 	memberToZoom = -1;	// used to zoom after another un-zooms. -1 for no one.
-	
+
 	$scope.enter = function(i) {
 		if ( !inTransition ) $scope.memberZoomed = i;
 		else memberToZoom = i;

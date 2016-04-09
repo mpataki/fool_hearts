@@ -3,12 +3,14 @@ var FoolHeartsApp = angular.module('FoolHeartsApp', [
   'duParallax',
 	'indexCtrl',
   'homeCtrl',
+  'reelCtrl',
   'testimonialsCtrl',
   'repertoireCtrl',
   'membersCtrl',
   'weddingsCtrl',
   'faqCtrl',
   'contactQuoteCtrl',
+  'angular-inview'
 ]);
 
 FoolHeartsApp.config(['$routeProvider',

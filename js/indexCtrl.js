@@ -2,7 +2,17 @@ var indexCtrl = angular.module('indexCtrl', ['ngRoute', 'duParallax']);
 
 indexCtrl.controller('indexCtrl', function($scope, $rootScope, $location, $anchorScroll, parallaxHelper) {
 
-  $scope.paths = ['/home', '/reel', '/testimonials', '/repertoire', '/members', '/weddings', '/faq', '/contact_quote']
+  $scope.paths = [
+    '/home',
+    '/reel',
+    '/testimonials',
+    '/repertoire',
+    '/members',
+    '/weddings',
+    '/faq',
+    '/contact_quote'
+  ]
+
   $scope.navSelection = $scope.paths.indexOf($location.$$path);
   if ($scope.navSelection < 0) $scope.navSelection = 0;
 
@@ -42,11 +52,13 @@ indexCtrl.controller('indexCtrl', function($scope, $rootScope, $location, $ancho
 		}
 	}
 
-	$scope.setNavSelection = function(selection){
-		if ($scope.navSelection == selection ) return;
-		$scope.navSelection = selection;
+	$scope.setNavSelection = function(selection) {
+		if ( $scope.navSelection == selection ) return;
+
+    $scope.navSelection = selection;
 		$scope.rootScope.$broadcast('navigateAway');
-		if ( $scope.location.hash() != 'content' )
+
+    if ( $scope.location.hash() != 'content' )
 			navigate(selection);
 		else
 			setTimeout( function(){

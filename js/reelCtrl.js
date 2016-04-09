@@ -1,7 +1,6 @@
 var reelCtrl = angular.module('reelCtrl', ['angular-inview']);
 
-reelCtrl.controller("reelCtrl", function($scope) {
-
+reelCtrl.controller('reelCtrl', function($scope) {
 	$scope.showReel = false;
 
 	$scope.$on('navigateAway', function(){
