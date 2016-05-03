@@ -23,9 +23,9 @@ repertoireCtrl.controller('repertoireCtrl', function($scope) {
 	query.send(handleQueryResponse);
 
 	function handleQueryResponse(data) {
-		$scope.rep = data.C.Gf.map(function(e){
+		$scope.rep = data.G.Nf.map(function(e){
 			return { title: e.c[0].v, artist: e.c[1].v, released: e.c[2].v };
-		})
+		});
 		$scope.sortBy(ARTIST);
 		$scope.repTableLoaded = true;
 		$scope.$apply();
