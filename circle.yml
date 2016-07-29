@@ -1,5 +1,5 @@
 deployment:
-    aws:
-    branch: master
-        commands:
+  aws:
+      branch: master
+      commands:
         - /bin/bash deploy.sh
