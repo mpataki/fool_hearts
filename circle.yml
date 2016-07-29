@@ -1,6 +1,11 @@
 dependencies:
   override:
     - sudo pip install awscli
+
+test:
+  override:
+    - echo "no tests here"
+
 deployment:
   aws:
       branch: master
