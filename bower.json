@@ -9,7 +9,7 @@
   "homepage": "www.foolhearts.com",
   "private": true,
   "dependencies": {
-  	"angular": "1.2.x",
-  	"angular-route": "~1.2.x"
+    "bootstrap": "^3.3.7",
+    "handlebars": "^4.0.10"
   }
 }
