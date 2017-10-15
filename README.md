@@ -1,4 +1,4 @@
-fool_hearts
-===========
+# foolhearts.com
 
-This is a simple band website created using AngularJS.
+This is a simple static website Fool Hearts - a Toronto cover band.
+
