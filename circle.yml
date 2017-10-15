@@ -16,3 +16,10 @@ deployment:
       commands:
         - /bin/bash deploy.sh 'foolhearts.com/'
 
+experimental:
+  notify:
+    branches:
+      only:
+        - staging
+        - production
+
