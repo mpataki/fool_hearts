@@ -7,8 +7,15 @@ test:
     - echo "no tests here"
 
 deployment:
-  aws:
+  prod:
       branch: production
       commands:
-        - /bin/bash deploy.sh
+        - /bin/bash deploy.sh 'foolhearts.com/'
+
+deployment:
+  staging:
+      branch: staging
+      commands:
+        - /bin/bash deploy.sh 'staging.foolhearts.com/'
+
 
