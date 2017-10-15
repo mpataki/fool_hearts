@@ -8,7 +8,7 @@ test:
 
 deployment:
   aws:
-      branch: master
+      branch: production
       commands:
         - /bin/bash deploy.sh
 
