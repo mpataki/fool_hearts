@@ -9,11 +9,30 @@ body {
 
 .header {
   background-color: black;
-  height: 10em;
+  height: 70vh;
 }
 
 .title {
   text-align: center;
   color: white;
-  margin-top: 2em;
+  margin-top: 30%;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #E2E1DF;
+  text-shadow:
+    -1px -1px 0 #252525,
+    1px -1px 0 #252525,
+    -1px 1px 0 #252525,
+    1px 1px 0 #252525;
+}
+
+.title h1 {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 600%;
+}
+
+.hline {
+    height: 2px;
+    background: #E2E1DF;
+    border: 1px solid #252525;
 }
