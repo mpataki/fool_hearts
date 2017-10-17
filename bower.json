@@ -1,5 +1,5 @@
 {
-  "name": "Fool Hearts Website",
+  "name": "fool-hearts-website",
   "version": "1.0",
   "authors": [
     "mpataki <matpataki@gmail.com>"
@@ -9,7 +9,6 @@
   "homepage": "www.foolhearts.com",
   "private": true,
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "handlebars": "^4.0.10"
+    "bootstrap": "^3.3.7"
   }
 }
