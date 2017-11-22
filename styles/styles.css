@@ -1,38 +1,73 @@
 
 body {
-  margin: 0;
-}
-
-.container {
-
+    margin: 0;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .header {
-  background-color: black;
-  height: 70vh;
+    background-color: #252525;
+    height: 75vh;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
 }
 
 .title {
-  text-align: center;
-  color: white;
-  margin-top: 30%;
-  font-family: 'Roboto Condensed', sans-serif;
-  color: #E2E1DF;
-  text-shadow:
-    -1px -1px 0 #252525,
-    1px -1px 0 #252525,
-    -1px 1px 0 #252525,
-    1px 1px 0 #252525;
+    padding-top: 40vh;
+    text-align: center;
+    font-size: 450%;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #E2E1DF;
+    text-shadow:
+            -1px -1px 0 #252525,
+            1px -1px 0 #252525,
+            -1px 1px 0 #252525,
+            1px 1px 0 #252525;
 }
 
-.title h1 {
-  margin-top: auto;
-  margin-bottom: auto;
-  font-size: 600%;
-}
-
-.hline {
+.horizontal-line {
     height: 2px;
     background: #E2E1DF;
     border: 1px solid #252525;
+}
+
+#openning-blurb {
+    background-image: url("../images/SectionBG_PolkaDots.png");
+    background-attachment: fixed;
+    color: #e2e1df;
+    padding: 5% 15% 5% 15%;
+    font-size: 200%;
+    text-align: center;
+}
+
+.section-pic {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: block;
+}
+
+#section-1-pic {
+    height: 40rem;
+    background-image: url("../images/random_pic_1.jpg");
+    margin: 0%;
+}
+
+#section-2-pic {
+    height: 40rem;
+    background-image: url("../images/random_pic_2.jpg");
+}
+
+#section-3-pic {
+    height: 40rem;
+    background-image: url("../images/random_pic_1.jpg");
+}
+
+#section-4-pic {
+    height: 40rem;
+    background-image: url("../images/random_pic_2.jpg");
 }
