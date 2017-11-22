@@ -1,18 +1,24 @@
 
 body {
     margin: 0;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .header {
-    background-color: black;
-    height: 43rem;
+    background-color: #252525;
+    height: 75vh;
     display: block;
 }
 
+.container {
+    width: 100%;
+    max-width: 100%;
+}
+
 .title {
-    padding-top: 8rem;
+    padding-top: 40vh;
     text-align: center;
-    font-size: 350%;
+    font-size: 450%;
     color: white;
     font-family: 'Roboto Condensed', sans-serif;
     color: #E2E1DF;
@@ -29,29 +35,39 @@ body {
     border: 1px solid #252525;
 }
 
-.section {
+#openning-blurb {
+    background-image: url("../images/SectionBG_PolkaDots.png");
+    background-attachment: fixed;
+    color: #e2e1df;
+    padding: 5% 15% 5% 15%;
+    font-size: 200%;
+    text-align: center;
+}
+
+.section-pic {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: block;
 }
 
-#section-1 {
+#section-1-pic {
     height: 40rem;
     background-image: url("../images/random_pic_1.jpg");
+    margin: 0%;
 }
 
-#section-2 {
+#section-2-pic {
     height: 40rem;
     background-image: url("../images/random_pic_2.jpg");
 }
 
-#section-3 {
+#section-3-pic {
     height: 40rem;
     background-image: url("../images/random_pic_1.jpg");
 }
 
-#section-4 {
+#section-4-pic {
     height: 40rem;
     background-image: url("../images/random_pic_2.jpg");
 }
