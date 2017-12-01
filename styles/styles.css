@@ -5,16 +5,14 @@ body {
 }
 
 .header {
-    background-color: #252525;
     height: 75vh;
     display: block;
 }
 
 #header-video {
     width: auto;
-    height: auto;
+    height: 75vh;
     min-width: 100%;
-    min-height: 100%;
     overflow: hidden;
     position: absolute;
 }
@@ -25,9 +23,9 @@ body {
 }
 
 .title {
-    padding-top: 40vh;
+    padding-top: 26vh;
     text-align: center;
-    font-size: 450%;
+    font-size: 575%;
     color: white;
     font-family: 'Roboto Condensed', sans-serif;
     color: #E2E1DF;
@@ -37,11 +35,24 @@ body {
             -1px 1px 0 #252525,
             1px 1px 0 #252525;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
+    line-height: 10rem;
+}
+
+#title-grad {
+    background: -webkit-linear-gradient(rgba(37, 37, 37, 0), rgba(37, 37 37, 1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(37, 37, 37, 0), rgba(37, 37 37, 1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(37, 37, 37, 0), rgba(37, 37 37, 1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, #25252500 0%, #252525 100%); /* Standard syntax */
+
+    height: 75vh;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
 }
 
 .horizontal-line {
