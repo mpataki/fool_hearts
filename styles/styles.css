@@ -68,10 +68,13 @@ body {
     border: 2px solid #402651;
 }
 
-#openning-blurb {
+#main-content {
     background-image: url("../images/SectionBG_PolkaDots.png");
     background-attachment: fixed;
     color: #e2e1df;
+}
+
+#openning-blurb {
     padding: 5% 15% 5% 15%;
     font-size: 200%;
     text-align: center;
