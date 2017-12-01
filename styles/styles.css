@@ -10,6 +10,15 @@ body {
     display: block;
 }
 
+#header-video {
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
 .container {
     width: 100%;
     max-width: 100%;
@@ -27,6 +36,12 @@ body {
             1px -1px 0 #252525,
             -1px 1px 0 #252525,
             1px 1px 0 #252525;
+    position: absolute;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
 }
 
 .horizontal-line {
