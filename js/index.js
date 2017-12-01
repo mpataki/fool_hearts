@@ -1,7 +1,9 @@
 $(document).ready(function() {
     $('.videos').slick({
-        lazyLoad: 'ondemand',
+        lazyLoad: 'progressive',
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        draggable: true,
+        mobileFirst: true
     });
 });
