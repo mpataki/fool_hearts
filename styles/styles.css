@@ -87,10 +87,18 @@ body {
     display: block;
 }
 
-#section-1-pic {
-    height: 40rem;
-    background-image: url("../images/random_pic_1.jpg");
-    margin: 0%;
+.videos {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: 3em;
+    height: 30em;
+}
+
+.video {
+    height: 30em;
 }
 
 #section-2-pic {
