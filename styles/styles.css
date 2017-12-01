@@ -33,7 +33,6 @@ body {
     padding-top: 26vh;
     text-align: center;
     font-size: 575%;
-    color: white;
     font-family: 'Roboto Condensed', sans-serif;
     color: #E2E1DF;
     text-shadow:
@@ -78,6 +77,27 @@ body {
     padding: 5% 15% 5% 15%;
     font-size: 200%;
     text-align: center;
+}
+
+.section-title { /* boo duplicated code */
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #E2E1DF;
+    text-shadow:
+            -1px -1px 0 #402651,
+            1px -1px 0 #402651,
+            -1px 1px 0 #402651,
+            1px 1px 0 #402651;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4em;
+    left: 0;
+    right: 0;
+    line-height: 10rem;
+}
+
+.section-title-text {
+    margin-bottom: 0;
 }
 
 .section-pic {
