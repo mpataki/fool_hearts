@@ -1,12 +1,20 @@
 slickOptions = {
-    lazyLoad: 'progressive',
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    draggable: true,
-    mobileFirst: true
 };
 
 $(document).ready(function() {
-    $('.videos').slick(slickOptions);
-    $('.testimonials').slick(slickOptions);
+    $('.videos').slick({
+        draggable: true,
+        mobileFirst: true,
+        slidesToScroll: 1,
+        lazyLoad: 'progressive',
+        slidesToShow: 1
+    });
+
+    $('.testimonials').slick({
+        draggable: true,
+        mobileFirst: true,
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        adaptiveHeight: true
+    });
 });

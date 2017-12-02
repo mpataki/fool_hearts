@@ -68,8 +68,7 @@ body {
 }
 
 #main-content {
-    background-image: url("../images/SectionBG_PolkaDots.png");
-    background-attachment: fixed;
+    background: url("../images/SectionBG_PolkaDots.png") fixed;
     color: #e2e1df;
 }
 
@@ -125,16 +124,41 @@ body {
     margin-right: auto;
     padding-left: 3em;
     padding-right: 3em;
-    padding-bottom: 3em;
 }
 
 .testimonial {
+    position: relative;
+    background-color: #f6f4f4;
+    width: 45em;
+    padding: 0.5em 1em 1em;
+    border-radius: 5px;
+    margin: 1em;
+}
+
+.quote {
+    position: absolute;
+    background: url("../images/quote.png") no-repeat;
+    height: 180px;
+    width: 200px;
+    opacity: 0.1;
+}
+
+.testimonial-text {
+    color: #252525;
+    z-index: 1;
+    padding-left: 1em;
+    padding-top: 1em;
+}
+
+.testimonial-context {
+    padding-top: 1em;
+    text-align: right;
+    color: black;
+    font-size: 110%;
 }
 
 .section-pic {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: no-repeat fixed center;
     display: block;
 }
 
