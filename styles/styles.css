@@ -157,6 +157,10 @@ body {
     font-size: 110%;
 }
 
+#members-section {
+    margin-bottom: 0;
+}
+
 .section-pic {
     background: no-repeat fixed center;
     display: block;
