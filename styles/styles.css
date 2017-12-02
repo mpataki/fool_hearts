@@ -79,6 +79,10 @@ body {
     text-align: center;
 }
 
+.content-section {
+    margin-bottom: 4em;
+}
+
 .section-title { /* boo duplicated code */
     text-align: center;
     font-family: 'Roboto Condensed', sans-serif;
@@ -100,12 +104,6 @@ body {
     margin-bottom: 0;
 }
 
-.section-pic {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: block;
-}
 
 .videos {
     width: 75%;
@@ -121,9 +119,23 @@ body {
     height: 30em;
 }
 
-#section-2-pic {
-    height: 40rem;
-    background-image: url("../images/random_pic_2.jpg");
+.testimonials {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: 3em;
+}
+
+.testimonial {
+}
+
+.section-pic {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: block;
 }
 
 #section-3-pic {
