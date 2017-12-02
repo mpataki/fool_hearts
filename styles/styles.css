@@ -33,7 +33,6 @@ body {
     padding-top: 26vh;
     text-align: center;
     font-size: 575%;
-    color: white;
     font-family: 'Roboto Condensed', sans-serif;
     color: #E2E1DF;
     text-shadow:
@@ -69,8 +68,7 @@ body {
 }
 
 #main-content {
-    background-image: url("../images/SectionBG_PolkaDots.png");
-    background-attachment: fixed;
+    background: url("../images/SectionBG_PolkaDots.png") fixed;
     color: #e2e1df;
 }
 
@@ -80,12 +78,31 @@ body {
     text-align: center;
 }
 
-.section-pic {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: block;
+.content-section {
+    margin-bottom: 4em;
 }
+
+.section-title { /* boo duplicated code */
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #E2E1DF;
+    text-shadow:
+            -1px -1px 0 #402651,
+            1px -1px 0 #402651,
+            -1px 1px 0 #402651,
+            1px 1px 0 #402651;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4em;
+    left: 0;
+    right: 0;
+    line-height: 10rem;
+}
+
+.section-title-text {
+    margin-bottom: 0;
+}
+
 
 .videos {
     width: 75%;
@@ -101,9 +118,48 @@ body {
     height: 30em;
 }
 
-#section-2-pic {
-    height: 40rem;
-    background-image: url("../images/random_pic_2.jpg");
+.testimonials {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+.testimonial {
+    position: relative;
+    background-color: #f6f4f4;
+    width: 45em;
+    padding: 0.5em 1em 1em;
+    border-radius: 5px;
+    margin: 1em;
+}
+
+.quote {
+    position: absolute;
+    background: url("../images/quote.png") no-repeat;
+    height: 180px;
+    width: 200px;
+    opacity: 0.1;
+}
+
+.testimonial-text {
+    color: #252525;
+    z-index: 1;
+    padding-left: 1em;
+    padding-top: 1em;
+}
+
+.testimonial-context {
+    padding-top: 1em;
+    text-align: right;
+    color: black;
+    font-size: 110%;
+}
+
+.section-pic {
+    background: no-repeat fixed center;
+    display: block;
 }
 
 #section-3-pic {

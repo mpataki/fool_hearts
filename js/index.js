@@ -1,9 +1,20 @@
+slickOptions = {
+};
+
 $(document).ready(function() {
     $('.videos').slick({
-        lazyLoad: 'progressive',
-        slidesToShow: 1,
-        slidesToScroll: 1,
         draggable: true,
-        mobileFirst: true
+        mobileFirst: true,
+        slidesToScroll: 1,
+        lazyLoad: 'progressive',
+        slidesToShow: 1
+    });
+
+    $('.testimonials').slick({
+        draggable: true,
+        mobileFirst: true,
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        adaptiveHeight: true
     });
 });
