@@ -14,7 +14,6 @@ $(document).ready(function() {
         draggable: true,
         mobileFirst: true,
         slidesToScroll: 1,
-        slidesToShow: 1,
-        adaptiveHeight: true
+        slidesToShow: 1
     });
 });
