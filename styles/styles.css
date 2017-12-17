@@ -161,6 +161,8 @@ body {
 
 #contact-section {
     margin-bottom: 0;
+    padding-bottom: 3em;
+    text-align: center;
 }
 
 .slick-prev:before, .slick-next:before {
