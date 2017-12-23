@@ -173,8 +173,12 @@ body {
     text-align: center;
 }
 
-.slick-prev:before, .slick-next:before {
+#about-us .slick-prev:before, #about-us .slick-next:before {
     color: #402651;
+}
+
+.video-section .slick-prev:before, .video-section .slick-next:before {
+    color: #f6f4f4;
 }
 
 .member-pic {
