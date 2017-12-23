@@ -166,7 +166,7 @@ body {
 }
 
 #repertoire-section {
-
+    padding-bottom: 1em;
 }
 
 #contact-section {
@@ -185,10 +185,10 @@ body {
 }
 
 .set-title {
+    font-family: 'Swanky and Moo Moo', cursive;
+    font-size: xx-large;
     text-align: left;
-    padding-bottom: 0.4em;
     padding-left: 1em;
-    padding-top: 0.3em;
 }
 
 .set-line {
@@ -202,7 +202,7 @@ body {
     text-align: center;
     font-size: large;
     width: 17em;
-    padding-bottom: 2em;
+    padding: 0em 0em 1em 0em;
 }
 
 .member-pic {
