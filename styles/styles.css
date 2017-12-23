@@ -69,7 +69,7 @@ body {
 #main-content {
     background-color: #e2e1df;
     color: #252525;
-    padding-top: 5vh;
+    padding-top: 1em;
 }
 
 #opening-blurb {
@@ -87,7 +87,7 @@ body {
 }
 
 .content-section {
-    margin-bottom: 4em;
+    padding-top: 1.5em;
 }
 
 .section-title { /* boo duplicated code */
@@ -106,19 +106,27 @@ body {
     color: #402651;
 }
 
+.section-title-text-light {
+    margin-bottom: 0;
+    color: #f6f4f4;
+}
+
+.video-section {
+    background: black;
+}
+
 .videos {
-    width: 75%;
-    max-width: 90rem;
+    width: 90%;
+    max-width: 85em;
     margin-left: auto;
     margin-right: auto;
     padding-left: 3em;
     padding-right: 3em;
     padding-bottom: 3em;
-    height: 30em;
 }
 
 .video {
-    height: 30em;
+    height: 40em;
 }
 
 .testimonials {
@@ -167,6 +175,13 @@ body {
 
 .slick-prev:before, .slick-next:before {
     color: #402651;
+}
+
+.member-pic {
+    width: 8em;
+    border-radius: 8px;
+    border: 2px solid #222222;
+    padding: 1em;
 }
 
 .section-pic {
