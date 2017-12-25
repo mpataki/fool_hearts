@@ -5,7 +5,7 @@ body {
 }
 
 .header {
-    height: 85vh;
+    height: 95vh;
     display: block;
 }
 
@@ -29,7 +29,6 @@ body {
 }
 
 .title {
-    padding-top: 26vh;
     text-align: center;
     font-size: 575%;
     font-family: 'Roboto Condensed', sans-serif;
@@ -39,7 +38,7 @@ body {
             2px -2px 0 #402651,
             -2px 2px 0 #402651,
             2px 2px 0 #402651;
-    position: absolute;
+    position: fixed;
     z-index: 2;
     margin-left: auto;
     margin-right: auto;
@@ -48,13 +47,22 @@ body {
     line-height: 10rem;
 }
 
+.top-fixed {
+    position: fixed;
+    top: -26vh;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 23px;
+}
+
 #title-grad {
     background: -webkit-linear-gradient(#00000000, #000000); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#00000000, #000000); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#00000000, #000000); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to bottom, #00000000 0%, #000000 100%); /* Standard syntax */
 
-    height: 85vh;
+    height: 95vh;
     width: 100%;
     position: absolute;
     z-index: 1;
