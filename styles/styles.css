@@ -86,12 +86,7 @@ body {
     padding-right: 5%;
     font-size: larger;
     text-align: center;
-}
-
-#about-us {
-    max-width: 110rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0;
 }
 
 .content-section {
@@ -134,8 +129,7 @@ body {
 
 .testimonials {
     width: 75%;
-    margin-left: 1rem;
-    margin-right: auto;
+    margin: 0;
 }
 
 .testimonials .slick-prev:before, .video-section .slick-next:before {
