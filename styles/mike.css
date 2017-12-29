@@ -1,0 +1,33 @@
+.sticky {
+    width: 100%;
+    height: 200px;
+    background: purple;
+    color: whitesmoke;
+    text-align: center;
+    line-height: 200px;
+    font-size: 24pt;
+    transition: 3s;
+    top: 0;
+    left: 0;
+
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.space {
+    height: 3000px;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform-origin: 0 100%;
+}
+
+.mike {
+    height: 300px;
+}
