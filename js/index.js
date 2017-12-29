@@ -23,9 +23,6 @@ $(document).ready(function() {
     var titleFixed = false;
 
     function update() {
-        if (titleFixed)
-            return;
-
         var headerElm = document.getElementById('header');
         var headerBoundingRect = headerElm.getBoundingClientRect();
 
@@ -33,11 +30,22 @@ $(document).ready(function() {
         var titleBoundingRect = titleElem.getBoundingClientRect();
 
         var headerViewableHeight = headerBoundingRect.height + headerBoundingRect.top;
+        var transitionThreshold = titleBoundingRect.height + 10 /* padding */;
+
+        console.log(headerViewableHeight)
+
+        if (titleFixed && headerViewableHeight >= transitionThreshold) {
+            titleElem.classList.remove("title-locked");
+            titleFixed = false;
+        }
+
+        if (titleFixed)
+            return;
 
         var top = headerViewableHeight * 0.5 - titleBoundingRect.height / 2;
         titleElem.style.top = top.toString() + "px";
 
-        if (headerViewableHeight <= titleBoundingRect.height + 10 /* padding */) {
+        if (headerViewableHeight <= transitionThreshold) {
             titleElem.style.top = "";
             titleElem.classList.add("title-locked");
             titleFixed = true;
