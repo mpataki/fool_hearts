@@ -32,8 +32,6 @@ $(document).ready(function() {
         var headerViewableHeight = headerBoundingRect.height + headerBoundingRect.top;
         var transitionThreshold = titleBoundingRect.height + 10 /* padding */;
 
-        console.log(headerViewableHeight)
-
         if (titleFixed && headerViewableHeight >= transitionThreshold) {
             titleElem.classList.remove("title-locked");
             titleFixed = false;
