@@ -43,7 +43,7 @@ body {
     margin-right: auto;
     left: 0;
     right: 0;
-    line-height: 10rem;
+    line-height: 8rem;
     position: fixed;
 }
 
@@ -72,8 +72,11 @@ body {
 }
 
 #main-content {
-    background-color: #e2e1df;
-    color: #252525;
+    background-image: url("../images/wood_bg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #E2E1DF;
     padding-top: 1em;
 }
 
@@ -115,10 +118,6 @@ body {
     color: #f6f4f4;
 }
 
-.video-section {
-    background: black;
-}
-
 .videos {
     width: 90%;
     max-width: 85em;
@@ -137,6 +136,10 @@ body {
     width: 75%;
     margin-left: 1rem;
     margin-right: auto;
+}
+
+.testimonials .slick-prev:before, .video-section .slick-next:before {
+    color: #f6f4f4;
 }
 
 .card {
@@ -185,7 +188,7 @@ body {
     color: #402651;
 }
 
-.video-section .slick-prev:before, .video-section .slick-next:before {
+#about-us .slick-prev:before, #about-us .slick-next:before {
     color: #f6f4f4;
 }
 
@@ -204,6 +207,7 @@ body {
 }
 
 .set-list {
+    color: #252525;
     text-align: center;
     font-size: large;
     width: 17em;
