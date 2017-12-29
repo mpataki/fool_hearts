@@ -1,6 +1,3 @@
-slickOptions = {
-};
-
 $(document).ready(function() {
     $('.videos').slick({
         draggable: true,
@@ -16,4 +13,45 @@ $(document).ready(function() {
         slidesToScroll: 1,
         slidesToShow: 1
     });
+
+    window.scrollReveal = ScrollReveal();
+    window.scrollReveal.reveal('.video-section', {
+        duration: 600,
+        reset: true
+    });
+
+    var titleFixed = false;
+
+    function update() {
+        var headerElm = document.getElementById('header');
+        var headerBoundingRect = headerElm.getBoundingClientRect();
+
+        var titleElem = document.getElementsByClassName('title')[0];
+        var titleBoundingRect = titleElem.getBoundingClientRect();
+
+        var headerViewableHeight = headerBoundingRect.height + headerBoundingRect.top;
+        var transitionThreshold = titleBoundingRect.height + 10 /* padding */;
+
+        console.log(headerViewableHeight)
+
+        if (titleFixed && headerViewableHeight >= transitionThreshold) {
+            titleElem.classList.remove("title-locked");
+            titleFixed = false;
+        }
+
+        if (titleFixed)
+            return;
+
+        var top = headerViewableHeight * 0.5 - titleBoundingRect.height / 2;
+        titleElem.style.top = top.toString() + "px";
+
+        if (headerViewableHeight <= transitionThreshold) {
+            titleElem.style.top = "";
+            titleElem.classList.add("title-locked");
+            titleFixed = true;
+        }
+    }
+
+    $(window).scroll(update);
+    update(); // initialize
 });
