@@ -38,22 +38,19 @@ body {
             2px -2px 0 #402651,
             -2px 2px 0 #402651,
             2px 2px 0 #402651;
-    position: fixed;
     z-index: 2;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
     line-height: 10rem;
+    position: fixed;
 }
 
-.top-fixed {
-    position: fixed;
-    top: -26vh;
-    left: 0;
-    z-index: 999;
-    width: 100%;
-    height: 23px;
+.title-locked {
+    background: black;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 #title-grad {

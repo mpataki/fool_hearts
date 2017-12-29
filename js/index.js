@@ -20,20 +20,30 @@ $(document).ready(function() {
         reset: true
     });
 
+    var titleFixed = false;
 
     function update() {
+        if (titleFixed)
+            return;
+
         var headerElm = document.getElementById('header');
         var headerBoundingRect = headerElm.getBoundingClientRect();
 
         var titleElem = document.getElementsByClassName('title')[0];
         var titleBoundingRect = titleElem.getBoundingClientRect();
 
-        var top = (headerBoundingRect.height + headerBoundingRect.top) * 0.5 - titleBoundingRect.height / 2;
+        var headerViewableHeight = headerBoundingRect.height + headerBoundingRect.top;
+
+        var top = headerViewableHeight * 0.5 - titleBoundingRect.height / 2;
         titleElem.style.top = top.toString() + "px";
+
+        if (headerViewableHeight <= titleBoundingRect.height + 10 /* padding */) {
+            titleElem.style.top = "";
+            titleElem.classList.add("title-locked");
+            titleFixed = true;
+        }
     }
 
-
     $(window).scroll(update);
-
     update(); // initialize
 });
