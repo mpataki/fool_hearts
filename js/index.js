@@ -14,11 +14,14 @@ $(document).ready(function() {
         slidesToShow: 1
     });
 
-    window.scrollReveal = ScrollReveal();
-    window.scrollReveal.reveal('.video-section', {
-        duration: 600,
-        reset: true
+    window.scrollReveal = ScrollReveal({
+        reset: true,
+        distance: '100px',
+        scale: 1.0,
+        viewFactor: 0.5
     });
+
+    window.scrollReveal.reveal('.reveal');
 
     var titleFixed = false;
 
