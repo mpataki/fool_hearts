@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     font-family: 'Open Sans Condensed', sans-serif;
@@ -33,11 +32,7 @@ body {
     font-size: 575%;
     font-family: 'Roboto Condensed', sans-serif;
     color: #E2E1DF;
-    text-shadow:
-            -2px -2px 0 #402651,
-            2px -2px 0 #402651,
-            -2px 2px 0 #402651,
-            2px 2px 0 #402651;
+    text-shadow: -2px -2px 0 #402651, 2px -2px 0 #402651, -2px 2px 0 #402651, 2px 2px 0 #402651;
     position: fixed;
     z-index: 2;
     margin-left: auto;
@@ -57,11 +52,14 @@ body {
 }
 
 #title-grad {
-    background: -webkit-linear-gradient(#00000000, #000000); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#00000000, #000000); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#00000000, #000000); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom, #00000000 0%, #000000 100%); /* Standard syntax */
-
+    background: -webkit-linear-gradient(#00000000, #000000);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#00000000, #000000);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#00000000, #000000);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, #00000000 0%, #000000 100%);
+    /* Standard syntax */
     height: 95vh;
     width: 100%;
     position: absolute;
@@ -98,7 +96,8 @@ body {
     padding-top: 1.5em;
 }
 
-.section-title { /* boo duplicated code */
+.section-title {
+    /* boo duplicated code */
     text-align: center;
     font-family: 'Roboto Condensed', sans-serif;
     margin-left: auto;
@@ -184,11 +183,13 @@ body {
     text-align: center;
 }
 
-#about-us .slick-prev:before, #about-us .slick-next:before {
+#about-us .slick-prev:before,
+#about-us .slick-next:before {
     color: #402651;
 }
 
-.video-section .slick-prev:before, .video-section .slick-next:before {
+.video-section .slick-prev:before,
+.video-section .slick-next:before {
     color: #f6f4f4;
 }
 
@@ -218,4 +219,12 @@ body {
     border-radius: 8px;
     border: 2px solid #222222;
     padding: 1em;
+}
+
+.mike-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform-origin: 0 100%;
 }

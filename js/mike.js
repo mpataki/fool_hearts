@@ -4,4 +4,4 @@ $(window).scroll(function() {
 
     if (scroll >= 300) sticky.addClass('fixed');
     else sticky.removeClass('fixed');
-})
+}) 
