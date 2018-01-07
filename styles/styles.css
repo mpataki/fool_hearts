@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     font-family: 'Open Sans Condensed', sans-serif;
@@ -8,10 +7,19 @@ body {
     height: 100vh;
     display: block;
     overflow: hidden;
-    transform: translate3d(0,0,0); /* https://coderwall.com/p/2wzj-a/break-out-of-overflow-hidden-with-relative-positioned-fixed-elements */
+    transform: translate3d(0, 0, 0);
+    /* https://coderwall.com/p/2wzj-a/break-out-of-overflow-hidden-with-relative-positioned-fixed-elements */
 }
 
 #header-video {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+#header-img {
     position: fixed;
     min-width: 100%;
     min-height: 100%;
@@ -29,11 +37,7 @@ body {
     font-size: 575%;
     font-family: 'Roboto Condensed', sans-serif;
     color: #E2E1DF;
-    text-shadow:
-            -2px -2px 0 #402651,
-            2px -2px 0 #402651,
-            -2px 2px 0 #402651,
-            2px 2px 0 #402651;
+    text-shadow: -2px -2px 0 #402651, 2px -2px 0 #402651, -2px 2px 0 #402651, 2px 2px 0 #402651;
     z-index: 2;
     margin-left: auto;
     margin-right: auto;
@@ -51,10 +55,14 @@ body {
 }
 
 #title-grad {
-    background: -webkit-linear-gradient(#00000000, #000000); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#00000000, #000000); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#00000000, #000000); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom, #00000000 0%, #000000 100%); /* Standard syntax */
+    background: -webkit-linear-gradient(#00000000, #000000);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#00000000, #000000);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#00000000, #000000);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, #00000000 0%, #000000 100%);
+    /* Standard syntax */
     height: 100vh;
     width: 100%;
     position: absolute;
@@ -101,7 +109,8 @@ body {
     padding-top: 1.5em;
 }
 
-.section-title { /* boo duplicated code */
+.section-title {
+    /* boo duplicated code */
     text-align: center;
     font-family: 'Roboto Condensed', sans-serif;
     margin-left: auto;
@@ -140,7 +149,8 @@ body {
     margin: 0;
 }
 
-.testimonials .slick-prev:before, .video-section .slick-next:before {
+.testimonials .slick-prev:before,
+.video-section .slick-next:before {
     color: #f6f4f4;
 }
 
@@ -186,11 +196,13 @@ body {
     text-align: center;
 }
 
-#about-us .slick-prev:before, #about-us .slick-next:before {
+#about-us .slick-prev:before,
+#about-us .slick-next:before {
     color: #402651;
 }
 
-#about-us .slick-prev:before, #about-us .slick-next:before {
+#about-us .slick-prev:before,
+#about-us .slick-next:before {
     color: #f6f4f4;
 }
 
