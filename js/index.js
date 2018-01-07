@@ -15,7 +15,7 @@ $(document).ready(function() {
     });
 
     window.scrollReveal = ScrollReveal({
-        reset: true,
+        reset: false,
         distance: '100px',
         scale: 1.0,
         viewFactor: 0.5
