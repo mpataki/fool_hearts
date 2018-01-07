@@ -134,6 +134,9 @@ body {
     padding-left: 3em;
     padding-right: 3em;
     padding-bottom: 3em;
+    -webkit-box-shadow: 0px 0px 15px 1px #402651;
+    -moz-box-shadow: 0px 0px 15px 1px #402651;
+    box-shadow: 0px 0px 15px 1px #402651;
 }
 
 .video {
@@ -155,7 +158,9 @@ body {
     padding: 0.5em 1em 1em;
     border-radius: 5px;
     margin: 1em;
-    box-shadow: 4px 4px 18px #6f5282;
+    -webkit-box-shadow: 0px 0px 15px 3px #6f5282;
+    -moz-box-shadow: 0px 0px 15px 3px #6f5282;
+    box-shadow: 0px 0px 15px 3px #6f5282;
 }
 
 .quote {
