@@ -25,7 +25,7 @@ $(document).ready(function() {
 
     var titleFixed = false;
 
-    function update() {
+    function updateTitle() {
         var headerElm = document.getElementById('header');
         var headerBoundingRect = headerElm.getBoundingClientRect();
 
@@ -51,6 +51,26 @@ $(document).ready(function() {
             titleElem.classList.add("title-locked");
             titleFixed = true;
         }
+    }
+
+    function updateFooter() {
+        var headerBoundingRect = document.getElementById('header').getBoundingClientRect();
+        var footerElm = document.getElementById('footer');
+        var footerBoundingRect = footerElm.getBoundingClientRect();
+        var windowHeight = $(window).height();
+        
+        var revealFactor = 0.7;
+
+        var footerTop = 0;
+        footerTop = windowHeight + (headerBoundingRect.top * revealFactor);
+        footerTop = Math.max(footerTop, windowHeight - footerElm.getBoundingClientRect().height);
+
+        footerElm.style.top = footerTop + "px";
+    }
+
+    function update() {
+        updateTitle();
+        updateFooter();
     }
 
     $(window).scroll(update);
