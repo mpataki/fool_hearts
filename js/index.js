@@ -56,13 +56,10 @@ $(document).ready(function() {
     function updateFooter() {
         var headerBoundingRect = document.getElementById('header').getBoundingClientRect();
         var footerElm = document.getElementById('footer');
-        var footerBoundingRect = footerElm.getBoundingClientRect();
         var windowHeight = $(window).height();
-        
         var revealFactor = 0.7;
 
-        var footerTop = 0;
-        footerTop = windowHeight + (headerBoundingRect.top * revealFactor);
+        var footerTop = windowHeight + (headerBoundingRect.top * revealFactor);
         footerTop = Math.max(footerTop, windowHeight - footerElm.getBoundingClientRect().height);
 
         footerElm.style.top = footerTop + "px";
