@@ -212,6 +212,15 @@ body {
     color: #f6f4f4;
 }
 
+.set-list-container {
+    width: 45%;
+    min-width: 75em;
+    display: inline-table;
+    border-spacing: 1em;
+    margin: 0 auto;
+    border-spacing: 1em;
+}
+
 .set-title {
     font-family: 'Swanky and Moo Moo', cursive;
     font-size: xx-large;
@@ -232,6 +241,8 @@ body {
     font-size: large;
     width: 17em;
     padding: 0em 0em 1em 0em;
+    display: table-cell;
+    vertical-align: top;
 }
 
 .member-pic {
