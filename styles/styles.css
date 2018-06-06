@@ -20,11 +20,9 @@ body {
 }
 
 #header-img {
-    position: fixed;
-    min-width: 100%;
     min-height: 100%;
-    width: auto;
-    height: auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 .container {
