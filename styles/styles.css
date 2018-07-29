@@ -215,6 +215,7 @@ body {
 .set-list-scoll-area {
   width: 100%;
   overflow-x: scroll;
+  padding-bottom: 75px;
 }
 
 .set-list-container {
@@ -254,10 +255,6 @@ body {
     border-radius: 8px;
     border: 2px solid #222222;
     padding: 1em;
-}
-
-#footer-spacer {
-    height: 75px;
 }
 
 #footer {
