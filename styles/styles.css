@@ -273,9 +273,10 @@ body {
 }
 
 #social {
-    text-align: right;
-    padding-right: 1em;
-    color: white;
+  text-align: right;
+  padding-right: 1em;
+  color: white;
+  height: 100%;
 }
 
 #mail_icon {
@@ -283,4 +284,9 @@ body {
   width: 3em;
   vertical-align: middle;
   padding-right: 0.3em;
+}
+
+#instragram_icon {
+  height: 85%;
+  padding-top: 0.3em;
 }
