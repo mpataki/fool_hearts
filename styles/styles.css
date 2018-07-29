@@ -20,11 +20,9 @@ body {
 }
 
 #header-img {
-    position: fixed;
-    min-width: 100%;
     min-height: 100%;
-    width: auto;
-    height: auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 .container {
@@ -214,6 +212,14 @@ body {
     color: #f6f4f4;
 }
 
+.set-list-container {
+    width: 45%;
+    min-width: 75em;
+    border-spacing: 1em;
+    margin: 0 auto;
+    border-spacing: 1em;
+}
+
 .set-title {
     font-family: 'Swanky and Moo Moo', cursive;
     font-size: xx-large;
@@ -234,6 +240,8 @@ body {
     font-size: large;
     width: 17em;
     padding: 0em 0em 1em 0em;
+    display: table-cell;
+    vertical-align: top;
 }
 
 .member-pic {
@@ -247,9 +255,8 @@ body {
     position: fixed;
     top: 110vh;
     width: 100%;
-    height: 30px;
+    height: 75px;
     font-size: 15pt;
-    text-align: center;
     background-color: #181818;
     border-top: white;
     border-width: 20px;
@@ -258,11 +265,28 @@ body {
 #contact {
     text-align: left;
     padding-left: 1em;
+    font-size: larger;
+}
+
+#contact a {
+  color: white;
 }
 
 #social {
-    text-align: right;
-    padding-right: 1em;
-
+  text-align: right;
+  padding-right: 1em;
+  color: white;
+  height: 100%;
 }
 
+#mail_icon {
+  display: inline-block;
+  width: 3em;
+  vertical-align: middle;
+  padding-right: 0.3em;
+}
+
+#instragram_icon {
+  height: 85%;
+  padding-top: 0.3em;
+}
