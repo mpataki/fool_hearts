@@ -1,3 +1,5 @@
+const FOOTER_FIXED = "footer-fixed";
+
 $(document).ready(function() {
     $('.videos').slick({
         draggable: true,
@@ -60,7 +62,18 @@ $(document).ready(function() {
         var revealFactor = 0.7;
 
         var footerTop = windowHeight + (headerBoundingRect.top * revealFactor);
-        footerTop = Math.max(footerTop, windowHeight - footerElm.getBoundingClientRect().height);
+        var footerHeight = footerElm.getBoundingClientRect().height;
+
+        if (footerElm.classList.contains(FOOTER_FIXED))
+          return;
+
+        footerTop = Math.max(footerTop, windowHeight - footerHeight);
+
+        if (footerTop == windowHeight - footerHeight) {
+          footerElm.classList.add(FOOTER_FIXED);
+          footerElm.style = {};
+          return;
+        }
 
         footerElm.style.top = footerTop + "px";
     }
