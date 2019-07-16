@@ -1,11 +1,18 @@
 language: node_js
 node_js:
-  - node
+  - 9
+install:
+  - pip install --user awscli
+script: exit 0
 deploy:
+  on:
+    branch: master
   provider: s3
   bucket: foolhearts.com
   skip_cleanup: true
   region: us-east-1
+  acl: public_read
+  local-dir: ./
   access_key_id: AKIAX4USGN7TMVRH4GMM
   secret_access_key:
     secure: ghnRWcsYo1QuSCDzjXRS12OWZZJwPRzeCFY394VpjSsoBCySGVrrlN7/wKWA5vw3Hl0vUc9UaXqHY7B8hvmuzC1xYTXmgF3Cn6r+CuXfHqcdk4WdzspAVnxnhCMVO5kZrDjKsBvf2MILzA8A8PJPI/VmNOZMQOmfo5lL35gHlxvKYfd1JnIYfzE4r4qOELUy+5YY8ECKIpNQf2U3fs51tpEDFkLX6//Kg7OterhX1r5Nax73xw2OvV+nAFmtdRRLiKoXgXMONUqCQgOGCO4m5Eko9Do5PMfu54hvSx1OP9k+CGuzeMfmsXgWc42KXuTAoSW5qzkSrL4vZvw6vFF5ye8C2OPtGW2jwYgYM+PfxSf397fHudnAfj2xzoJHacU5utpJH+gQO6wsTuKQu2TkfTIf6cw4VW6l+llBb8NjsUYGqy305jsO9GUCfEZzanOKHKt+72WR43ZJs47S76j8r8oqh3zC2aKSck45JXVrn1bAC/xPsi2F2poxhGCKFbTvaS1LMr0IREy7q1QVM8YiQbIfGLNFGL4swQK1UyEkysOpE3fn6nLK+p0yyCCyjzn+fGw1JBEzDmX4O4w77ByMPJSkUVxkhzCtU1XiGoEvkrCcSdl6DC0btpAMpKyPSz5ZmENfIo7IOg1eSZRPfDBe54Ag8uy3qA8kWyajfsdyDrs=
