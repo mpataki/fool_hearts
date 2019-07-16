@@ -3,6 +3,7 @@ node_js:
   - 9
 install:
   - pip install --user awscli
+script: exit 0
 deploy:
   on:
     branch: master
