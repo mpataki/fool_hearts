@@ -196,6 +196,10 @@ body {
     padding-bottom: 1em;
 }
 
+#clients-section {
+    padding-bottom: 1em;
+}
+
 #contact-section {
     margin-bottom: 0;
     padding-bottom: 3em;
@@ -302,7 +306,7 @@ body {
 #clients {
   margin-left: auto;
   margin-right: auto;
-  width: 35%;
+  width: 59em;
 }
 
 #gladstone {
