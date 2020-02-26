@@ -298,3 +298,25 @@ body {
   height: 85%;
   padding-top: 0.3em;
 }
+
+#clients {
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+}
+
+#gladstone {
+  width: 16em;
+  padding: 2em;
+}
+
+#uken {
+  width: 16em;
+  padding: 2em;
+}
+
+#cest_what {
+  width: 14em;
+  padding: 2em;
+}
+
