@@ -200,6 +200,10 @@ body {
     padding-bottom: 1em;
 }
 
+.client-image {
+  float: left;
+}
+
 #contact-section {
     margin-bottom: 0;
     padding-bottom: 3em;
