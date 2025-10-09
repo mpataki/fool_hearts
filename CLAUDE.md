@@ -8,10 +8,10 @@ This is a static website for Fool Hearts, a Toronto cover band. The site is depl
 
 ## Tech Stack
 
-- **Frontend**: Vanilla JavaScript with jQuery
+- **Frontend**: Vanilla JavaScript (jQuery only for Slick Carousel dependency)
 - **CSS Framework**: Skeleton (lightweight responsive grid)
 - **JavaScript Libraries**:
-  - jQuery 3.2.1
+  - jQuery 3.2.1 (required by Slick only)
   - Slick Carousel (for video and testimonial carousels)
   - ScrollReveal (for scroll-based animations)
 - **Dependency Management**: Bower (legacy)
@@ -54,10 +54,12 @@ The site is a single HTML file with these main sections:
 
 ### JavaScript Behavior
 **js/index.js** handles:
-- **Title positioning**: Dynamically positions "FOOL HEARTS" title to float over the hero image. As user scrolls, the title locks to the top of the viewport with a fixed background
-- **Footer reveal**: Footer is positioned fixed and reveals as the user scrolls down
-- **Carousels**: Initializes Slick carousels for videos and testimonials
+- **Title positioning**: Dynamically positions "FOOL HEARTS" title to float over the hero image. As user scrolls, the title locks to the top of the viewport with a fixed background (vanilla JS)
+- **Footer reveal**: Footer is positioned fixed and reveals as the user scrolls down (vanilla JS)
+- **Carousels**: Initializes Slick carousels for videos and testimonials (requires jQuery)
 - **Scroll animations**: Uses ScrollReveal to animate elements with class `.reveal` as they come into view
+
+The codebase uses vanilla JavaScript for all custom functionality. jQuery is only included as a dependency for the Slick Carousel library.
 
 ### Styling Approach
 - Uses Skeleton grid system for responsive columns

@@ -1,6 +1,7 @@
 const FOOTER_FIXED = "footer-fixed";
 
-$(document).ready(function() {
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Slick carousels (requires jQuery)
     $('.videos').slick({
         draggable: true,
         mobileFirst: true,
@@ -16,6 +17,7 @@ $(document).ready(function() {
         slidesToShow: 1
     });
 
+    // Initialize ScrollReveal
     window.scrollReveal = ScrollReveal({
         reset: false,
         distance: '100px',
@@ -58,7 +60,7 @@ $(document).ready(function() {
     function updateFooter() {
         var headerBoundingRect = document.getElementById('header').getBoundingClientRect();
         var footerElm = document.getElementById('footer');
-        var windowHeight = $(window).height();
+        var windowHeight = window.innerHeight;
         var revealFactor = 0.7;
 
         var footerTop = windowHeight + (headerBoundingRect.top * revealFactor);
@@ -83,6 +85,6 @@ $(document).ready(function() {
         updateFooter();
     }
 
-    $(window).scroll(update);
+    window.addEventListener('scroll', update);
     update(); // initialize
 });

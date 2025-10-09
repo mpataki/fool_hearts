@@ -5,7 +5,6 @@ body {
 }
 
 .header {
-    height: 100vh;
     display: block;
     overflow: hidden;
     transform: translate3d(0,0,0); /* https://coderwall.com/p/2wzj-a/break-out-of-overflow-hidden-with-relative-positioned-fixed-elements */
@@ -269,8 +268,6 @@ body {
     height: 75px;
     font-size: 15pt;
     background-color: #181818;
-    border-top: white;
-    border-width: 20px;
 }
 
 .footer-fixed {
@@ -326,5 +323,66 @@ body {
 #cest_what {
   width: 14em;
   padding: 2em;
+}
+
+/* Mobile responsive styles */
+@media only screen and (max-width: 768px) {
+  /* Optimize header height for mobile */
+  .header {
+    height: 60vh;
+  }
+
+  /* Make header image fill container on mobile */
+  #header-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Fix gradient to match header height */
+  #title-grad {
+    height: 60vh;
+  }
+
+  /* Position title at bottom of image over black gradient */
+  .title {
+    font-size: 13vw;
+    line-height: 1.2;
+    position: absolute;
+    top: calc(60vh - 6rem) !important;
+    padding: 0.5rem 0;
+  }
+
+  .title-locked {
+    position: fixed !important;
+    top: 0 !important;
+  }
+
+  /* Make client logos responsive */
+  #clients {
+    width: 100%;
+    text-align: center;
+  }
+
+  .client-image {
+    float: none;
+    display: inline-block;
+    width: 40%;
+    max-width: 12em;
+    padding: 1em;
+  }
+
+  /* Fix setlist to not require horizontal scroll */
+  .set-list-container {
+    min-width: auto;
+    width: 100%;
+    display: block;
+  }
+
+  .set-list {
+    display: block;
+    width: 90%;
+    margin: 0 auto 2em auto;
+  }
 }
 
