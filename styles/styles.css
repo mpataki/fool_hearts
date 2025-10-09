@@ -150,6 +150,23 @@ body {
     height: 40em;
 }
 
+.video-credit {
+    text-align: center;
+    color: #E2E1DF;
+    margin-top: 1.5em;
+    font-size: 1.1em;
+}
+
+.video-credit a {
+    color: #6f5282;
+    text-decoration: none;
+}
+
+.video-credit a:hover {
+    color: #8a6ba3;
+    text-decoration: underline;
+}
+
 .testimonials {
     width: 75%;
     margin: 0;
