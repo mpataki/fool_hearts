@@ -30,6 +30,11 @@ document.addEventListener('DOMContentLoaded', function() {
     var titleFixed = false;
 
     function updateTitle() {
+        // Skip parallax on mobile (screens under 770px)
+        if (window.innerWidth < 770) {
+            return;
+        }
+
         var headerElm = document.getElementById('header');
         var headerBoundingRect = headerElm.getBoundingClientRect();
 
@@ -47,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (titleFixed)
             return;
 
-        var top = headerViewableHeight * 0.5 - titleBoundingRect.height / 2;
+        var top = headerViewableHeight * 0.7 - titleBoundingRect.height / 2;
         titleElem.style.top = top.toString() + "px";
 
         if (headerViewableHeight <= transitionThreshold) {
@@ -86,5 +91,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     window.addEventListener('scroll', update);
+    window.addEventListener('resize', update);
     update(); // initialize
 });

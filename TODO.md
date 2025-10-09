@@ -50,3 +50,4 @@ Project management tracking for site improvements and technical debt.
 - 2025-10-09: Removed jQuery dependency - converted to vanilla JavaScript
 - 2025-10-09: Fixed mobile layout issues - responsive title, client logos, and setlists
 - 2025-10-09: Optimized mobile hero - reduced height to 60vh, positioned title over gradient at bottom
+- 2025-10-09: Disabled parallax effect on mobile (<770px) and adjusted title positioning (52vh mobile, 60vh desktop)
