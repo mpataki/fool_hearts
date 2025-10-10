@@ -15,12 +15,12 @@ Project management tracking for site improvements and technical debt.
 - [ ] **Update from Bower** - Bower abandoned in 2017, migrate to npm or CDN
 
 ### Medium Priority
-- [ ] **HTML5 compliance**
-  - [ ] Remove deprecated `frameborder="0"` from iframes (use CSS)
-  - [ ] Add viewport meta tag for proper mobile rendering
-  - [ ] Update to modern iframe embedding practices
-- [ ] **Performance improvements**
-  - [ ] Lazy load video iframes (currently all 3 load immediately)
+- [x] **HTML5 compliance**
+  - [x] Remove deprecated `frameborder="0"` from iframes (use CSS)
+  - [x] Add viewport meta tag for proper mobile rendering
+  - [x] Update to modern iframe embedding practices
+- [x] **Performance improvements**
+  - [x] Lazy load video iframes (using loading="lazy" attribute)
   - [ ] Consider using YouTube thumbnail links with click-to-play
   - [ ] Optimize image loading
 
@@ -51,3 +51,5 @@ Project management tracking for site improvements and technical debt.
 - 2025-10-09: Fixed mobile layout issues - responsive title, client logos, and setlists
 - 2025-10-09: Optimized mobile hero - reduced height to 60vh, positioned title over gradient at bottom
 - 2025-10-09: Disabled parallax effect on mobile (<770px) and adjusted title positioning (52vh mobile, 60vh desktop)
+- 2025-10-09: HTML5 compliance - removed deprecated frameborder, added viewport meta tag, lazy loading iframes
+- 2025-10-09: Added Revival 1863 video credit below video carousel
