@@ -1,0 +1,2 @@
+# Never upload macOS Finder metadata if it appears locally.
+.DS_Store

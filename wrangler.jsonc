@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "foolhearts-site",
+  "compatibility_date": "2026-10-12",
+  // Assets-only Worker: no `main`, every request is served from public/.
+  "assets": {
+    "directory": "./public",
+    // No 404.html exists; unknown paths get the platform's plain 404.
+    "not_found_handling": "none",
+    "html_handling": "auto-trailing-slash"
+  }
+}
