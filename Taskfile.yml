@@ -1,0 +1,28 @@
+version: "3"
+
+# Local deploy path. The same `wrangler deploy` also runs from GitHub Actions on push to
+# master; use whichever you prefer. Credentials come from 1Password via `op run`, so the
+# token is never in the shell, a file, or history.
+
+vars:
+  WORKER_URL: https://foolhearts-site.matpataki.workers.dev
+
+tasks:
+  dev:
+    desc: Serve public/ locally with wrangler (no Cloudflare login needed)
+    cmds:
+      - npx wrangler dev
+
+  check:
+    desc: Assert every local ref on a running site returns 200 (URL defaults to the deployed Worker)
+    cmds:
+      - node scripts/check-local-refs.mjs {{.URL | default .WORKER_URL}}
+
+  deploy:
+    desc: Deploy the Worker, then smoke-check the deployed site
+    cmds:
+      - op run --env-file=.env.op -- npx wrangler deploy
+      - scripts/smoke-deployed.sh {{.WORKER_URL}}
+    env:
+      CI: "true"
+      WRANGLER_SEND_METRICS: "false"
