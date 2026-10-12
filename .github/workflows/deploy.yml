@@ -34,9 +34,12 @@ jobs:
         env:
           CI: "true"
 
+  # Inert until the repo variable CF_CI_DEPLOY is set to "true" (Settings → Variables).
+  # Before that, pushes to master skip this job rather than fail on absent secrets;
+  # once it's on, a missing CLOUDFLARE_* secret is a real error and wrangler says so.
   deploy:
     name: wrangler deploy
-    if: github.event_name == 'push'
+    if: github.event_name == 'push' && vars.CF_CI_DEPLOY == 'true'
     runs-on: ubuntu-latest
     environment:
       name: production
