@@ -1,10 +1,12 @@
 version: "3"
 
 # Local deploy is the chosen path (the GitHub Actions deploy job stays off unless
-# CF_CI_DEPLOY is set). Credentials come from the 1Password Environment
-# `foolhearts-deploy`, mounted by the 1Password app at ./.env (gitignored; it is a
-# pipe the app serves, not a file with values on disk). If `.env` is missing, open
-# 1Password → Developer → Environments → foolhearts-deploy → mount it here.
+# CF_CI_DEPLOY is set). Config comes from the 1Password Environment `foolhearts-deploy`,
+# mounted by the 1Password app at ./.env (gitignored; a pipe the app serves, not a file
+# with values on disk). CLOUDFLARE_API_TOKEN there is an `op://` reference, not a value;
+# `op run --env-file=.env` resolves it for the deploy, so the token exists only inside
+# that process. If `.env` is missing, open 1Password → Developer → Environments →
+# foolhearts-deploy → mount it here.
 
 dotenv: [".env"]
 
@@ -25,6 +27,6 @@ tasks:
   deploy:
     desc: Deploy the Worker, then smoke-check the deployed site
     cmds:
-      - npx wrangler deploy
+      - op run --env-file=.env -- npx wrangler deploy
       - scripts/smoke-deployed.sh {{.WORKER_URL}}
       - scripts/smoke-deployed.sh https://foolhearts.com

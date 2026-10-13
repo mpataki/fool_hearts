@@ -35,9 +35,11 @@ task deploy                                # wrangler deploy via `op run`, then 
 ```
 
 Credentials for `task deploy` come from the 1Password Environment `foolhearts-deploy`,
-mounted by the 1Password app at `./.env` (a pipe the app serves; gitignored). The Taskfile
-loads it via `dotenv`. Never put a token value in the repo, a shell history, or an agent
-transcript; if `.env` is absent, ask Mat to mount it rather than working around it.
+mounted by the 1Password app at `./.env` (a pipe the app serves; gitignored). In it,
+`CLOUDFLARE_API_TOKEN` is an `op://` reference, not a value; the deploy runs under
+`op run --env-file=.env`, which resolves it inside that process only. Never put a token
+value in the repo, a shell history, or an agent transcript; if `.env` is absent, ask Mat
+to mount it rather than working around it.
 
 ## Infra lives elsewhere
 
