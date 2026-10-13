@@ -34,9 +34,10 @@ task check URL=http://127.0.0.1:8787       # every local ref must be 200
 task deploy                                # wrangler deploy via `op run`, then smoke check
 ```
 
-Credentials for `task deploy` come from 1Password at run time (`.env.op` holds only
-`op://` references). Never put a token value in the repo, a shell history, or an agent
-transcript.
+Credentials for `task deploy` come from the 1Password Environment `foolhearts-deploy`,
+mounted by the 1Password app at `./.env` (a pipe the app serves; gitignored). The Taskfile
+loads it via `dotenv`. Never put a token value in the repo, a shell history, or an agent
+transcript; if `.env` is absent, ask Mat to mount it rather than working around it.
 
 ## Infra lives elsewhere
 
